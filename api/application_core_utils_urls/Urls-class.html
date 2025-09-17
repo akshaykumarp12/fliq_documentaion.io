@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Urls class from the urls library, for the Dart programming language.">
+  <title>Urls class - urls library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_core_utils_urls/application_core_utils_urls-library.html">application&#47;core&#47;utils&#47;urls.dart</a></li>
+    <li class="self-crumb">Urls class</li>
+  </ol>
+  <div class="self-name">Urls</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="application_core_utils_urls&#47;application_core_utils_urls-library-sidebar.html"
+    data-below-sidebar="application_core_utils_urls&#47;Urls-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">Urls</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>Centralized collection of API endpoint URLs for the application.</p>
+<p>This class provides static constants and variables representing base URLs,
+versioning, and specific REST API endpoint paths used throughout the app.</p>
+<p>The base URL is dynamically obtained from the app environment configuration,
+allowing flexibility between development, staging, and production environments.</p>
+<p>Example usage of building full endpoint URLs:</p>
+<pre class="language-dart"><code>final loginUrl = '${Urls.apiVersionUrl}${Urls.auth}/login';
+</code></pre>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="Urls" class="callable">
+          <span class="name"><a href="../application_core_utils_urls/Urls/Urls.html">Urls</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-properties">
+    <h2>Static Properties</h2>
+    <dl class="properties">
+        <dt id="apiVersionUrl" class="property">
+  <span class="name"><a href="../application_core_utils_urls/Urls/apiVersionUrl.html">apiVersionUrl</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  A combined base API version URL for constructing full API paths.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="baseURL" class="property">
+  <span class="name"><a href="../application_core_utils_urls/Urls/baseURL.html">baseURL</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  The base URL dynamically retrieved from the environment configuration.
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="sendOtp" class="property">
+  <span class="name"><a href="../application_core_utils_urls/Urls/sendOtp.html">sendOtp</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="verifyOtp" class="property">
+  <span class="name"><a href="../application_core_utils_urls/Urls/verifyOtp.html">verifyOtp</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+
+  <section class="summary offset-anchor" id="constants">
+    <h2>Constants</h2>
+    <dl class="properties">
+        <dt id="acceptGiftReveelRequest" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/acceptGiftReveelRequest-constant.html">acceptGiftReveelRequest</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="addNewProfileImage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/addNewProfileImage-constant.html">addNewProfileImage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="adminSettings" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/adminSettings-constant.html">adminSettings</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="advanceFilter" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/advanceFilter-constant.html">advanceFilter</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="appealToBlackList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/appealToBlackList-constant.html">appealToBlackList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="appleAuthentication" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/appleAuthentication-constant.html">appleAuthentication</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="audioMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/audioMessage-constant.html">audioMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="auth" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/auth-constant.html">auth</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="blockedContactsList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/blockedContactsList-constant.html">blockedContactsList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="blockProfile" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/blockProfile-constant.html">blockProfile</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="boostprofile" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/boostprofile-constant.html">boostprofile</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="bulkContactBlock" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/bulkContactBlock-constant.html">bulkContactBlock</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="bulkDelete" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/bulkDelete-constant.html">bulkDelete</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="buyCoinPack" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/buyCoinPack-constant.html">buyCoinPack</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="buySubscriptionPlan" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/buySubscriptionPlan-constant.html">buySubscriptionPlan</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="chat" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/chat-constant.html">chat</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="checkRealGiftAccepted" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/checkRealGiftAccepted-constant.html">checkRealGiftAccepted</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="checkRealGiftAccepting" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/checkRealGiftAccepting-constant.html">checkRealGiftAccepting</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="coinMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/coinMessage-constant.html">coinMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="currentLuckyDraw" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/currentLuckyDraw-constant.html">currentLuckyDraw</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="dailyCheckin" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/dailyCheckin-constant.html">dailyCheckin</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="deleteProfile" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/deleteProfile-constant.html">deleteProfile</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="enableChat" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/enableChat-constant.html">enableChat</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="fetchAllMessages" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/fetchAllMessages-constant.html">fetchAllMessages</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="fetchLatestMessagesBetweenUsers" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/fetchLatestMessagesBetweenUsers-constant.html">fetchLatestMessagesBetweenUsers</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="fetchUnDeliverdMessages" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/fetchUnDeliverdMessages-constant.html">fetchUnDeliverdMessages</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="fetchUnSeenMessagesBetweenUsers" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/fetchUnSeenMessagesBetweenUsers-constant.html">fetchUnSeenMessagesBetweenUsers</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="flashMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/flashMessage-constant.html">flashMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getAllBoostplans" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getAllBoostplans-constant.html">getAllBoostplans</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getAllFaqCategory" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getAllFaqCategory-constant.html">getAllFaqCategory</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getAllSubscriptionPlan" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getAllSubscriptionPlan-constant.html">getAllSubscriptionPlan</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getAllTickets" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getAllTickets-constant.html">getAllTickets</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getBalance" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getBalance-constant.html">getBalance</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getCities" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getCities-constant.html">getCities</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getCoinPlans" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getCoinPlans-constant.html">getCoinPlans</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getCountry" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getCountry-constant.html">getCountry</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getDislikedProfileList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getDislikedProfileList-constant.html">getDislikedProfileList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getEmotions" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getEmotions-constant.html">getEmotions</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getFaq" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getFaq-constant.html">getFaq</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getLastWeekLuckyDrawWinner" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getLastWeekLuckyDrawWinner-constant.html">getLastWeekLuckyDrawWinner</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getLikedProfileList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getLikedProfileList-constant.html">getLikedProfileList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getLocation" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getLocation-constant.html">getLocation</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getNotifications" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getNotifications-constant.html">getNotifications</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getProfileDetails" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getProfileDetails-constant.html">getProfileDetails</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getReceivedCoinsList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getReceivedCoinsList-constant.html">getReceivedCoinsList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getReceivedGiftList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getReceivedGiftList-constant.html">getReceivedGiftList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getRecentEmotions" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getRecentEmotions-constant.html">getRecentEmotions</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getRecentLuckyDraw" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getRecentLuckyDraw-constant.html">getRecentLuckyDraw</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getRecivedLikeList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getRecivedLikeList-constant.html">getRecivedLikeList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getRegistrationTraits" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getRegistrationTraits-constant.html">getRegistrationTraits</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getSentCoinsList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getSentCoinsList-constant.html">getSentCoinsList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getSentGiftList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getSentGiftList-constant.html">getSentGiftList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getStates" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getStates-constant.html">getStates</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getSubscriptionBasePlans" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getSubscriptionBasePlans-constant.html">getSubscriptionBasePlans</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getSubscriptionPlanType" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getSubscriptionPlanType-constant.html">getSubscriptionPlanType</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getSuperLikedProfileList" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getSuperLikedProfileList-constant.html">getSuperLikedProfileList</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getThisWeekLuckyDrawWinner" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getThisWeekLuckyDrawWinner-constant.html">getThisWeekLuckyDrawWinner</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="getUserOnlineStatus" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/getUserOnlineStatus-constant.html">getUserOnlineStatus</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="giftMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/giftMessage-constant.html">giftMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="giftRevealRequestWithCoin" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/giftRevealRequestWithCoin-constant.html">giftRevealRequestWithCoin</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="googleAuthentication" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/googleAuthentication-constant.html">googleAuthentication</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="imageMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/imageMessage-constant.html">imageMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="joinLuckyDraw" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/joinLuckyDraw-constant.html">joinLuckyDraw</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="keywordFilter" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/keywordFilter-constant.html">keywordFilter</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="listContactUsers" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/listContactUsers-constant.html">listContactUsers</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="listDocumentVerification" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/listDocumentVerification-constant.html">listDocumentVerification</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="listGifts" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/listGifts-constant.html">listGifts</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="listSticker" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/listSticker-constant.html">listSticker</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="listSuggestedProfiles" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/listSuggestedProfiles-constant.html">listSuggestedProfiles</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="messages" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/messages-constant.html">messages</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="profileAction" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/profileAction-constant.html">profileAction</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="profileIntarations" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/profileIntarations-constant.html">profileIntarations</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="profileSettings" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/profileSettings-constant.html">profileSettings</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="profileStalking" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/profileStalking-constant.html">profileStalking</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="pusherSettings" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/pusherSettings-constant.html">pusherSettings</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="recentReferralHistory" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/recentReferralHistory-constant.html">recentReferralHistory</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="recentReferralHistoryMarkViewed" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/recentReferralHistoryMarkViewed-constant.html">recentReferralHistoryMarkViewed</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="register" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/register-constant.html">register</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="rejectGiftReveelRequest" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/rejectGiftReveelRequest-constant.html">rejectGiftReveelRequest</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="reportProfileDropdown" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/reportProfileDropdown-constant.html">reportProfileDropdown</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="reportUser" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/reportUser-constant.html">reportUser</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="requestGiftReveel" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/requestGiftReveel-constant.html">requestGiftReveel</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="selfieVerification" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/selfieVerification-constant.html">selfieVerification</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="sendGiftUseingCoin" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/sendGiftUseingCoin-constant.html">sendGiftUseingCoin</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="setcurrentLuckyDraw" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/setcurrentLuckyDraw-constant.html">setcurrentLuckyDraw</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="setMessageDelivered" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/setMessageDelivered-constant.html">setMessageDelivered</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="setMessageViewed" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/setMessageViewed-constant.html">setMessageViewed</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="setOneTimeViewed" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/setOneTimeViewed-constant.html">setOneTimeViewed</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="setPassportMode" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/setPassportMode-constant.html">setPassportMode</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="stickerMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/stickerMessage-constant.html">stickerMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="stopTypeingStatusUpdate" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/stopTypeingStatusUpdate-constant.html">stopTypeingStatusUpdate</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="textMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/textMessage-constant.html">textMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="ticketRise" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/ticketRise-constant.html">ticketRise</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="trackGift" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/trackGift-constant.html">trackGift</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="unblockUser" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/unblockUser-constant.html">unblockUser</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="undoSwipe" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/undoSwipe-constant.html">undoSwipe</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="updateOnlineStatus" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/updateOnlineStatus-constant.html">updateOnlineStatus</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="updateProfile" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/updateProfile-constant.html">updateProfile</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="updateProfileImage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/updateProfileImage-constant.html">updateProfileImage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="updateTextMessage" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/updateTextMessage-constant.html">updateTextMessage</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="updateTypingStatus" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/updateTypingStatus-constant.html">updateTypingStatus</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="uploadFile" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/uploadFile-constant.html">uploadFile</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="userOffline" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/userOffline-constant.html">userOffline</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="userOnline" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/userOnline-constant.html">userOnline</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="vanishModeBaseUrl" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/vanishModeBaseUrl-constant.html">vanishModeBaseUrl</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="vanishModeDisable" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/vanishModeDisable-constant.html">vanishModeDisable</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="vanishModeEnable" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/vanishModeEnable-constant.html">vanishModeEnable</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="vanismodeStatus" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/vanismodeStatus-constant.html">vanismodeStatus</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="version" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/version-constant.html">version</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="viewSuggestedProfile" class="constant">
+    <span class="name "><a href="../application_core_utils_urls/Urls/viewSuggestedProfile-constant.html">viewSuggestedProfile</a></span>
+  <span class="signature">&#8594; const <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+    </dl>
+  </section>
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_core_utils_urls/application_core_utils_urls-library.html">urls</a></li>
+    <li class="self-crumb">Urls class</li>
+</ol>
+
+    <h5>urls library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

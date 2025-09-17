@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the onGenerateRoute method from the AppRoute class, for the Dart programming language.">
+  <title>onGenerateRoute method - AppRoute class - app_route library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../application_core_route_app_route/application_core_route_app_route-library.html">application&#47;core&#47;route&#47;app_route.dart</a></li>
+    <li><a href="../../application_core_route_app_route/AppRoute-class.html">AppRoute</a></li>
+    <li class="self-crumb">onGenerateRoute static method</li>
+  </ol>
+  <div class="self-name">onGenerateRoute</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="application_core_route_app_route&#47;AppRoute-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">onGenerateRoute</span> static method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Route-class.html">Route</a></span>
+<span class="name ">onGenerateRoute</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="onGenerateRoute-param-settings"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/RouteSettings-class.html">RouteSettings</a></span> <span class="parameter-name">settings</span></span></li>
+</ol>)
+
+      
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static Route&lt;dynamic&gt; onGenerateRoute(RouteSettings settings) {
+  Logger.logWarning(
+    &#39;Route Name: ${settings.name},  Arguments: ${settings.arguments}, ArgumentType: ${settings.arguments.runtimeType}&#39;,
+  );
+  final arguments = (settings.arguments as Map&lt;String, dynamic&gt;?);
+
+  switch (settings.name) {
+    case HtmlViewer.routeName:
+      return pushRoute(
+        settings,
+        HtmlViewer(
+          content: arguments?[&#39;content&#39;] ?? &#39;&#39;,
+          title: arguments?[&#39;title&#39;] ?? &#39;&#39;,
+        ),
+      );
+    case ConnectionErrorScreen.routeName:
+      return pushRoute(settings, ConnectionErrorScreen());
+    case CreateAppealRequestScreen.routeName:
+      return pushRoute(settings, CreateAppealRequestScreen());
+    case AccountBlockedScreen.routeName:
+      return pushRoute(settings, const AccountBlockedScreen());
+    case BlockContactPopupScreen.routeName:
+      return pushRoute(settings, const BlockContactPopupScreen());
+    case TicketListScreen.routeName:
+      return pushRoute(settings, const TicketListScreen());
+    case ProfileStalkers.routeName:
+      return pushRoute(settings, const ProfileStalkers());
+    case VerifiedAccountScreen.routeName:
+      return pushRoute(settings, const VerifiedAccountScreen());
+    case CameraHomeScreen.routeName:
+      List&lt;CameraDescription&gt; cameras = arguments![&#39;cameras&#39;];
+      return pushRoute(
+        settings,
+        CameraHomeScreen(
+          cameras: cameras,
+        ),
+      );
+    case AddOccupationScreen.routeName:
+      return pushRoute(settings, const AddOccupationScreen());
+    case GiftAddressScreen.routeName:
+      return pushRoute(settings, const GiftAddressScreen());
+    case DailyLimitReached.routeName:
+      return pushRoute(settings, const DailyLimitReached());
+    case MatchedProfileScreen.routeName:
+      String partnerProfileUrl = arguments?[&#39;partnerProfileUrl&#39;];
+      String partnerName = arguments?[&#39;partnerName&#39;];
+      int? partnerId = arguments?[&#39;partnerId&#39;];
+      return pushRoute(
+          settings,
+          MatchedProfileScreen(
+            partnerProfileUrl: partnerProfileUrl,
+            partnerName: partnerName,
+            partnerId: partnerId,
+          ));
+    case ProfileReportScreen.routeName:
+      return pushRoute(
+        settings,
+        ProfileReportScreen(),
+      );
+    case ImageSendScreen.routeName:
+      final param = arguments![&#39;param&#39;] as MessageParterParam;
+      return pushRoute(
+        settings,
+        ImageSendScreen(
+          messageParterParam: param,
+        ),
+      );
+    case GiftTrackingScreen.routeName:
+      final orderId = arguments![&#39;orderId&#39;] as String;
+      final isAccepted = arguments[&#39;giftRevealRequestAccepted&#39;] ?? false;
+      return pushRoute(
+        settings,
+        GiftTrackingScreen(
+          orderId: orderId,
+          giftRevealRequestAccepted: isAccepted,
+          giftName: arguments[&#39;giftName&#39;] as String,
+          trackingId: arguments[&#39;trackingId&#39;] as String?,
+          orderCode: arguments[&#39;orderCode&#39;] as String,
+          userCityName: arguments[&#39;userCityName&#39;] as String,
+          createdAt: arguments[&#39;createdAt&#39;] as DateTime?,
+          updatedAt: arguments[&#39;updatedAt&#39;] as DateTime?,
+          senderId: arguments[&#39;senderId&#39;] as int,
+        ),
+      );
+
+    &#47;&#47; case RedeemGiftScreen.routeName:
+    &#47;&#47;   return pushRoute(settings, const RedeemGiftScreen());
+    &#47;&#47; case SnapShotScreen.routeName:
+    &#47;&#47;   return pushRoute(settings, const SnapShotScreen());
+    &#47;&#47; case PreviousWinnerScreen.routeName:
+    &#47;&#47;   return pushRoute(settings, const PreviousWinnerScreen());
+    &#47;&#47; case LuckayDrawScreen.routeName:
+    &#47;&#47;   return pushRoute(settings, const LuckayDrawScreen());
+    case IntarativeImageViewer.routeName:
+      final image = arguments![&#39;image&#39;] as String;
+      final isOneTimeView = arguments[&#39;isOneTimeView&#39;] as bool?;
+      final isOnVanishMode = arguments[&#39;isOnVanishMode&#39;] as bool?;
+
+      return pushRoute(
+        settings,
+        IntarativeImageViewer(
+          image: image,
+          isOnVanishMode: isOnVanishMode ?? false,
+          isOneTimeView: isOneTimeView ?? false,
+        ),
+      );
+
+    case AdvanceFilterScreen.routeName:
+      return pushRoute(settings, const AdvanceFilterScreen());
+    case NotificationScreen.routeName:
+      return pushRoute(settings, const NotificationScreen());
+    case ChatScreen.routeName:
+      final param = arguments![&#39;param&#39;] as MessageParterParam;
+
+      return pushRoute(
+        settings,
+        ChatScreen(
+          param: param,
+        ),
+      );
+    case SetYourMoodScreen.routeName:
+      return pushRoute(settings, const SetYourMoodScreen());
+    &#47;&#47; case AnnonymousGiftScreen.routeName:
+    &#47;&#47;   &#47;&#47; String partnerName = arguments?[&#39;partnerName&#39;];
+    &#47;&#47;   return pushRoute(settings, AnnonymousGiftScreen());
+    case GiftScreen.routeName:
+      return pushRoute(
+        settings,
+        GiftScreen(
+          profileId: arguments![&#39;profileId&#39;],
+        ),
+      );
+    case AddReligionScreen.routeName:
+      return pushRoute(settings, const AddReligionScreen());
+    case AddDrinkingHabitScreen.routeName:
+      return pushRoute(settings, const AddDrinkingHabitScreen());
+    case AddSmokingHabitScreen.routeName:
+      return pushRoute(settings, const AddSmokingHabitScreen());
+    case AddGenderScreen.routeName:
+      return pushRoute(settings, const AddGenderScreen());
+    case AddLanguageScreen.routeName:
+      return pushRoute(settings, const AddLanguageScreen());
+    case AddHeightScreen.routeName:
+      return pushRoute(settings, const AddHeightScreen());
+    case AddLocationSCreen.routeName:
+      return pushRoute(settings, const AddLocationSCreen());
+    case AddLookingForScreen.routeName:
+      return pushRoute(settings, const AddLookingForScreen());
+    case AddEducationScreen.routeName:
+      return pushRoute(settings, const AddEducationScreen());
+    case AddSexualOrentattion.routeName:
+      return pushRoute(settings, const AddSexualOrentattion());
+    case AddLifestyle.routeName:
+      return pushRoute(settings, const AddLifestyle());
+    case AddInterest.routeName:
+      return pushRoute(settings, const AddInterest());
+    case EditProfile.routeName:
+      return pushRoute(settings, const EditProfile());
+    case CouponScreen.routeName:
+      return pushRoute(settings, const CouponScreen());
+    case YourGiftsScreen.routeName:
+      return pushRoute(settings, const YourGiftsScreen());
+    case FAQScreen.routeName:
+      return pushRoute(settings, const FAQScreen());
+    case TicketSubmittedScreen.routeName:
+      &#47;&#47; final String ticketCode = arguments![&#39;ticketCode&#39;];
+      return pushRoute(
+          settings,
+          TicketSubmittedScreen(
+              &#47;&#47; ticketCode: ticketCode,
+              ));
+    case HelpCenterScreen.routeName:
+      return pushRoute(settings, const HelpCenterScreen());
+    case LicenseScreen.routeName:
+      return pushRoute(settings, const LicenseScreen());
+    case VipPassUnsubscribeScreen.routeName:
+      return pushRoute(settings, const VipPassUnsubscribeScreen());
+    case TermsAndConditionScreen.routeName:
+      return pushRoute(settings, const TermsAndConditionScreen());
+    case PrivacyAndSecurity.routeName:
+      return pushRoute(settings, const PrivacyAndSecurity());
+    case ChatPrivacyScreen.routeName:
+      return pushRoute(settings, const ChatPrivacyScreen());
+    case FliqCoinScreen.routeName:
+      return pushRoute(settings, const FliqCoinScreen());
+    case ReferYourFriendScreen.routeName:
+      return pushRoute(settings, const ReferYourFriendScreen());
+    case FliqPremiumScreen.routeName:
+      return pushRoute(settings, const FliqPremiumScreen());
+    case PassportModeScreen.routeName:
+      return pushRoute(
+        settings,
+        PassportModeScreen(
+          isProfmFilter: arguments?[&#39;isProfmFilter&#39;],
+        ),
+      );
+    case CompleteAccountVerificationScreen.routeName:
+      return pushRoute(settings, const CompleteAccountVerificationScreen());
+    case VerifyAccountScreen.routeName:
+      return pushRoute(settings, const VerifyAccountScreen());
+    case SendCoinsScreen.routeName:
+      return pushRoute(settings, const SendCoinsScreen());
+    case SendGiftScreen.routeName:
+      return pushRoute(settings, const SendGiftScreen());
+    case ProfileDislikedScreen.routeName:
+      return pushRoute(settings, const ProfileDislikedScreen());
+    case ProfileLikedScreen.routeName:
+      return pushRoute(settings, const ProfileLikedScreen());
+    case SuperLikedScreen.routeName:
+      return pushRoute(settings, const SuperLikedScreen());
+    case ActivityLogScreen.routeName:
+      return pushRoute(settings, const ActivityLogScreen());
+    case BlockContact.routeName:
+      return pushRoute(settings, const BlockContact());
+    case SettingsScreen.routeName:
+      return pushRoute(settings, const SettingsScreen());
+    case SuggestedProfileDetailsScreen.routeName:
+      final id = arguments?[&#39;id&#39;];
+      final isPremium = arguments?[&#39;isPremium&#39;] ?? false;
+      final ignorePointer = arguments?[&#39;ignorePointer&#39;] ?? false;
+
+
+      return SlideFadeRoute(
+        page: SuggestedProfileDetailsScreen(
+          id: id,ignorePOinter: ignorePointer,
+          isPremiumCustomer: isPremium as bool,
+        ),
+      );
+
+    case AppRoot.routeName:
+      return pushRoute(settings, const AppRoot());
+    case ProfileCreation.routeName:
+      return pushRoute(settings, const ProfileCreation());
+    case EmailRegistrationScreen.routeName:
+      return pushRoute(settings, const EmailRegistrationScreen());
+    case OtpVerificationScreen.routeName:
+      return pushRoute(
+        settings,
+        OtpVerificationScreen(
+          action: arguments![&#39;action&#39;] as APIAction,
+        ),
+      );
+    case PhoneNumberRegScreen.routeName:
+      return pushRoute(settings, const PhoneNumberRegScreen());
+    case Login.routeName:
+      return pushRoute(settings, const Login());
+    case SplashScreen.routeName:
+    default:
+      return pushRoute(settings, const SplashScreen());
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../application_core_route_app_route/application_core_route_app_route-library.html">app_route</a></li>
+    <li><a href="../../application_core_route_app_route/AppRoute-class.html">AppRoute</a></li>
+    <li class="self-crumb">onGenerateRoute static method</li>
+</ol>
+
+    <h5>AppRoute class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

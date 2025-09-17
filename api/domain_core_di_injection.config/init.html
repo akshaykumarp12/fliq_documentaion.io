@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the init function from the injection.config library, for the Dart programming language.">
+  <title>init function - injection.config library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../domain_core_di_injection.config/domain_core_di_injection.config-library.html">domain&#47;core&#47;di&#47;injection.config.dart</a></li>
+    <li class="self-crumb">init function</li>
+  </ol>
+  <div class="self-name">init</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="domain_core_di_injection.config&#47;domain_core_di_injection.config-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">init</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+<span class="returntype"><a href="https://api.flutter.dev/flutter/flutter_test/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/get_it/8.0.3/get_it/GetIt-class.html">GetIt</a></span>&gt;</span></span>
+<span class="name ">init</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="init-param-getIt"><span class="type-annotation"><a href="https://pub.dev/documentation/get_it/8.0.3/get_it/GetIt-class.html">GetIt</a></span> <span class="parameter-name">getIt</span>, {</span></li>
+<li><span class="parameter" id="init-param-environment"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">environment</span>, </span></li>
+<li><span class="parameter" id="init-param-environmentFilter"><span class="type-annotation"><a href="https://pub.dev/documentation/injectable/2.5.0/injectable/EnvironmentFilter-class.html">EnvironmentFilter</a>?</span> <span class="parameter-name">environmentFilter</span>, </span></li>
+</ol>})
+
+        
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">Future&lt;_i174.GetIt&gt; init(
+  _i174.GetIt getIt, {
+  String? environment,
+  _i526.EnvironmentFilter? environmentFilter,
+}) async {
+  final gh = _i526.GetItHelper(
+    getIt,
+    environment,
+    environmentFilter,
+  );
+  final appInjectionModule = _$AppInjectionModule();
+  final firebaseInjectableModule = _$FirebaseInjectableModule();
+  gh.factory&lt;_i129.LocationCubit&gt;(() =&gt; _i129.LocationCubit());
+  await gh.factoryAsync&lt;_i460.SharedPreferences&gt;(
+    () =&gt; appInjectionModule.pref(),
+    preResolve: true,
+  );
+  await gh.factoryAsync&lt;_i793.LocalNotification&gt;(
+    () =&gt; appInjectionModule.initLocalNotification(),
+    preResolve: true,
+  );
+  await gh.factoryAsync&lt;_i574.FirebaseServeice&gt;(
+    () =&gt; firebaseInjectableModule.firebaseServeice(),
+    preResolve: true,
+  );
+  gh.singleton&lt;_i530.RunSafely&gt;(() =&gt; _i530.RunSafely());
+  gh.singleton&lt;_i275.EventManager&gt;(
+    () =&gt; _i275.EventManager(),
+    dispose: (i) =&gt; i.dispose(),
+  );
+  gh.lazySingleton&lt;_i370.GiftMessageSendRule&gt;(
+      () =&gt; _i370.GiftMessageSendRule());
+  gh.lazySingleton&lt;_i395.TextMessageSendRule&gt;(
+      () =&gt; _i395.TextMessageSendRule());
+  gh.lazySingleton&lt;_i778.StickerMessageSendRule&gt;(
+      () =&gt; _i778.StickerMessageSendRule());
+  gh.lazySingleton&lt;_i766.GiftSendLimitingChatRule&gt;(
+      () =&gt; _i766.GiftSendLimitingChatRule());
+  gh.lazySingleton&lt;_i624.FlashMessageUsingCoinRule&gt;(
+      () =&gt; _i624.FlashMessageUsingCoinRule());
+  gh.lazySingleton&lt;_i253.NewMatchDisableMessageRule&gt;(
+      () =&gt; _i253.NewMatchDisableMessageRule());
+  gh.lazySingleton&lt;_i358.FlashMessageDailyLimitRule&gt;(
+      () =&gt; _i358.FlashMessageDailyLimitRule());
+  gh.lazySingleton&lt;_i889.NonPremiumUserFlashMessageSendRule&gt;(
+      () =&gt; _i889.NonPremiumUserFlashMessageSendRule());
+  gh.lazySingleton&lt;_i1009.TemporaryMessageRestrictionRule&gt;(
+      () =&gt; _i1009.TemporaryMessageRestrictionRule());
+  gh.lazySingleton&lt;_i298.PremiumUserFlashMessageSendRule&gt;(
+      () =&gt; _i298.PremiumUserFlashMessageSendRule());
+  gh.lazySingleton&lt;_i489.CoinMessageSendRule&gt;(
+      () =&gt; _i489.CoinMessageSendRule());
+  gh.lazySingleton&lt;_i1053.PremiumStickerMessageSendRule&gt;(
+      () =&gt; _i1053.PremiumStickerMessageSendRule());
+  gh.lazySingleton&lt;_i190.GlobalBlocObserver&gt;(() =&gt; _i190.GlobalBlocObserver());
+  gh.lazySingleton&lt;_i663.TemporaryBoostRestrictionRule&gt;(
+      () =&gt; _i663.TemporaryBoostRestrictionRule());
+  gh.lazySingleton&lt;_i651.PremiumUserBoostRule&gt;(
+      () =&gt; _i651.PremiumUserBoostRule());
+  gh.lazySingleton&lt;_i180.NonPremiumUserBoostRule&gt;(
+      () =&gt; _i180.NonPremiumUserBoostRule());
+  gh.lazySingleton&lt;_i973.GiftRevealRule&gt;(() =&gt; _i973.GiftRevealRule());
+  gh.lazySingleton&lt;_i1024.GiftSendLimitingRule&gt;(
+      () =&gt; _i1024.GiftSendLimitingRule());
+  gh.lazySingleton&lt;_i337.GiftSentRule&gt;(() =&gt; _i337.GiftSentRule());
+  gh.lazySingleton&lt;_i248.NonPremiumSuperLikeRule&gt;(
+      () =&gt; _i248.NonPremiumSuperLikeRule());
+  gh.lazySingleton&lt;_i175.SwipeUndoRule&gt;(() =&gt; _i175.SwipeUndoRule());
+  gh.lazySingleton&lt;_i252.PremiumSuperLikeRule&gt;(
+      () =&gt; _i252.PremiumSuperLikeRule());
+  gh.lazySingleton&lt;_i831.SuperLikeWithCoinRule&gt;(
+      () =&gt; _i831.SuperLikeWithCoinRule());
+  gh.lazySingleton&lt;_i393.NonPremiumUserLikeProfileRule&gt;(
+      () =&gt; _i393.NonPremiumUserLikeProfileRule());
+  gh.lazySingleton&lt;_i955.PremiumUserLikeProfileRule&gt;(
+      () =&gt; _i955.PremiumUserLikeProfileRule());
+  gh.lazySingleton&lt;_i939.TaskHandler&gt;(() =&gt; _i939.TaskHandler());
+  gh.lazySingleton&lt;_i527.NotificationSevice&gt;(() =&gt; _i527.NotificationSevice());
+  gh.lazySingleton&lt;_i178.LocalDb&gt;(() =&gt; _i178.LocalDb());
+  gh.lazySingleton&lt;_i441.GetUserCurrentUserPosition&gt;(
+      () =&gt; _i441.GetUserCurrentUserPosition());
+  gh.lazySingleton&lt;_i153.NoOpEventHandler&gt;(() =&gt; _i153.NoOpEventHandler());
+  gh.lazySingleton&lt;_i116.GoogleSignIn&gt;(() =&gt; appInjectionModule.googleSignIn);
+  gh.lazySingleton&lt;_i895.Connectivity&gt;(() =&gt; appInjectionModule.connectivity);
+  gh.lazySingleton&lt;_i605.PusherChannelsFlutter&gt;(
+      () =&gt; appInjectionModule.pusher);
+  gh.lazySingleton&lt;_i690.InAppPurchase&gt;(
+      () =&gt; appInjectionModule.inAppPurcahase);
+  gh.lazySingleton&lt;_i361.Dio&gt;(() =&gt; appInjectionModule.dio);
+  gh.lazySingleton&lt;_i500.Workmanager&gt;(() =&gt; appInjectionModule.workManager);
+  gh.lazySingleton&lt;_i892.FirebaseMessaging&gt;(
+      () =&gt; firebaseInjectableModule.workManager);
+  gh.lazySingleton&lt;_i468.SuggestedProfileDetailsEventBus&gt;(
+    () =&gt; _i468.SuggestedProfileDetailsEventBus(),
+    dispose: (i) =&gt; i.dispose(),
+  );
+  gh.lazySingleton&lt;_i779.LoginContext&gt;(() =&gt; _i779.LoginContext());
+  gh.lazySingleton&lt;_i327.GetSocialAccountDetailsContext&gt;(
+      () =&gt; _i327.GetSocialAccountDetailsContext());
+  gh.lazySingleton&lt;_i63.FetchMatchingProfileDataSource&gt;(
+      () =&gt; _i63.FetchMatchingProfileDataSource());
+  gh.lazySingleton&lt;_i70.ProfileSwipeContext&gt;(() =&gt; _i70.ProfileSwipeContext());
+  gh.lazySingleton&lt;_i683.SwipeEventBus&gt;(
+    () =&gt; _i683.SwipeEventBus(),
+    dispose: (i) =&gt; i.dispose(),
+  );
+  gh.lazySingleton&lt;_i731.ListContactUserDataSource&gt;(
+      () =&gt; _i731.ListContactUserDataSource());
+  gh.lazySingleton&lt;_i188.FetchUnSeenMessageDataSource&gt;(
+      () =&gt; _i188.FetchUnSeenMessageDataSource());
+  gh.lazySingleton&lt;_i199.FetchLatestMessageDataSource&gt;(
+      () =&gt; _i199.FetchLatestMessageDataSource());
+  gh.lazySingleton&lt;_i1024.FetchMessageDataSource&gt;(
+      () =&gt; _i1024.FetchMessageDataSource());
+  gh.lazySingleton&lt;_i764.MessageRepository&gt;(() =&gt; _i981.LocalMessageRepository(
+        gh&lt;_i275.EventManager&gt;(),
+        gh&lt;_i178.LocalDb&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i175.InternetConnectivity&gt;(
+      () =&gt; _i175.InternetConnectivity(gh&lt;_i895.Connectivity&gt;()));
+  gh.lazySingleton&lt;_i674.LocalChatProfileRepository&gt;(
+      () =&gt; _i674.LocalChatProfileRepositoryImpl(
+            gh&lt;_i178.LocalDb&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i460.SharedPreferences&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i213.GetBalanceLocalRepository&gt;(
+      () =&gt; _i337.GetBalanceLocalRepositoryImpl(
+            gh&lt;_i178.LocalDb&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i617.GetGoogleAccountDetailsStrategy&gt;(
+      () =&gt; _i617.GetGoogleAccountDetailsStrategy(
+            gh&lt;_i116.GoogleSignIn&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i188.FetchUnSeenMessageLocalDataSource&gt;(
+      () =&gt; _i188.FetchUnSeenMessageLocalDataSource(
+            gh&lt;_i178.LocalDb&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i199.FetchLatestMessageLocalDataSource&gt;(
+      () =&gt; _i199.FetchLatestMessageLocalDataSource(
+            gh&lt;_i178.LocalDb&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i1024.FetchMessageLocalDataSource&gt;(
+      () =&gt; _i1024.FetchMessageLocalDataSource(
+            gh&lt;_i178.LocalDb&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.singleton&lt;_i90.DioClient&gt;(() =&gt; _i90.DioClient(gh&lt;_i361.Dio&gt;()));
+  gh.lazySingleton&lt;_i736.IStatusFacad&gt;(() =&gt; _i878.IStatusFacadImpl(
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+      ));
+  gh.lazySingleton&lt;_i971.ChatMessageSeenEventHandler&gt;(
+      () =&gt; _i971.ChatMessageSeenEventHandler(gh&lt;_i764.MessageRepository&gt;()));
+  gh.lazySingleton&lt;_i336.ChatMessageOneTimeViewHandler&gt;(
+      () =&gt; _i336.ChatMessageOneTimeViewHandler(gh&lt;_i764.MessageRepository&gt;()));
+  gh.lazySingleton&lt;_i6.AudioRecorderService&gt;(
+      () =&gt; _i6.AudioRecorderService(gh&lt;_i530.RunSafely&gt;()));
+  gh.lazySingleton&lt;_i1014.GetAppleAccountDetailsStrategy&gt;(
+      () =&gt; _i1014.GetAppleAccountDetailsStrategy(gh&lt;_i530.RunSafely&gt;()));
+  gh.lazySingleton&lt;_i352.GetAppleAccountDetailsStrategy&gt;(
+      () =&gt; _i352.GetAppleAccountDetailsStrategy(gh&lt;_i530.RunSafely&gt;()));
+  gh.lazySingleton&lt;_i359.SavePopupFcm&gt;(
+      () =&gt; _i359.SavePopupFcm(gh&lt;_i530.RunSafely&gt;()));
+  gh.lazySingleton&lt;_i79.UserEmotionUpdateEvent&gt;(() =&gt;
+      _i79.UserEmotionUpdateEvent(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i579.FindMessageById&gt;(
+      () =&gt; _i579.FindMessageById(gh&lt;_i764.MessageRepository&gt;()));
+  gh.lazySingleton&lt;_i580.FindRecentMessageByProfileId&gt;(
+      () =&gt; _i580.FindRecentMessageByProfileId(gh&lt;_i764.MessageRepository&gt;()));
+  gh.lazySingleton&lt;_i935.SendVanishModeStatusStrategy&gt;(
+      () =&gt; _i935.SendVanishModeStatusStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i1066.SendTextMessageStrategy&gt;(
+      () =&gt; _i1066.SendTextMessageStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i357.SendGiftMessageStrategy&gt;(
+      () =&gt; _i357.SendGiftMessageStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i894.SendCoinMessageStrategy&gt;(
+      () =&gt; _i894.SendCoinMessageStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i307.SendStickerMessageStrategy&gt;(
+      () =&gt; _i307.SendStickerMessageStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i500.SendAudioMessageStrategy&gt;(
+      () =&gt; _i500.SendAudioMessageStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i775.SendFlashMessageStrategy&gt;(
+      () =&gt; _i775.SendFlashMessageStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i431.SendImageMessageStrategy&gt;(
+      () =&gt; _i431.SendImageMessageStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i843.PusherEventHandlerContext&gt;(
+      () =&gt; _i843.PusherEventHandlerContext(gh&lt;_i153.NoOpEventHandler&gt;()));
+  gh.lazySingleton&lt;_i188.FetchUnSeenMessageRemoteDataSource&gt;(
+      () =&gt; _i188.FetchUnSeenMessageRemoteDataSource(
+            dioClient: gh&lt;_i90.DioClient&gt;(),
+            runSafely: gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i199.FetchLatestMessageRemoteDataSource&gt;(
+      () =&gt; _i199.FetchLatestMessageRemoteDataSource(
+            dioClient: gh&lt;_i90.DioClient&gt;(),
+            runSafely: gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i1042.MatchingProfileLocalRepository&gt;(
+      () =&gt; _i760.MatchingProfileLocalRepositoryImpl(
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i178.LocalDb&gt;(),
+            gh&lt;_i683.SwipeEventBus&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i434.FetchProfileActionDoneProfileRemoteDataSource&gt;(
+      () =&gt; _i434.FetchProfileActionDoneProfileRemoteDataSource(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+          ));
+  gh.lazySingleton&lt;_i265.SwipeUpStrategy&gt;(() =&gt; _i265.SwipeUpStrategy(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+      ));
+  gh.lazySingleton&lt;_i732.SwipeLeftStrategy&gt;(() =&gt; _i732.SwipeLeftStrategy(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+      ));
+  gh.lazySingleton&lt;_i796.SwipeUndoStrategy&gt;(() =&gt; _i796.SwipeUndoStrategy(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+      ));
+  gh.lazySingleton&lt;_i239.SwipeRightStrategy&gt;(() =&gt; _i239.SwipeRightStrategy(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+      ));
+  gh.singleton&lt;_i175.InternetConnectivityGuard&gt;(
+      () =&gt; _i175.InternetConnectivityGuard(gh&lt;_i175.InternetConnectivity&gt;()));
+  gh.lazySingleton&lt;_i230.SwipeRuleExecutor&gt;(
+      () =&gt; appInjectionModule.provideSwipeRuleExecutor(
+            gh&lt;_i831.SuperLikeWithCoinRule&gt;(),
+            gh&lt;_i955.PremiumUserLikeProfileRule&gt;(),
+            gh&lt;_i393.NonPremiumUserLikeProfileRule&gt;(),
+            gh&lt;_i248.NonPremiumSuperLikeRule&gt;(),
+            gh&lt;_i252.PremiumSuperLikeRule&gt;(),
+            gh&lt;_i175.SwipeUndoRule&gt;(),
+            gh&lt;_i175.InternetConnectivityGuard&gt;(),
+          ));
+  gh.lazySingleton&lt;_i463.UpdateVanishModeStatus&gt;(
+      () =&gt; _i463.UpdateVanishModeStatus(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i674.LocalChatProfileRepository&gt;(),
+          ));
+  gh.lazySingleton&lt;_i623.IAccountBlockedFacade&gt;(
+      () =&gt; _i734.IAccountBlockedFacdeImpl(
+            runSafely: gh&lt;_i530.RunSafely&gt;(),
+            dioClient: gh&lt;_i90.DioClient&gt;(),
+          ));
+  gh.lazySingleton&lt;_i215.UpdateProfile&gt;(() =&gt; _i215.UpdateProfile(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+      ));
+  gh.lazySingleton&lt;_i291.Register&gt;(() =&gt; _i291.Register(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+      ));
+  gh.lazySingleton&lt;_i272.VerifyOtp&gt;(() =&gt; _i272.VerifyOtp(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+      ));
+  gh.singleton&lt;_i1002.ProfileSaveSubscriber&gt;(
+      () =&gt; _i1002.ProfileSaveSubscriber(gh&lt;_i275.EventManager&gt;()));
+  gh.singleton&lt;_i1002.ProfileUpdateSubscriber&gt;(
+      () =&gt; _i1002.ProfileUpdateSubscriber(gh&lt;_i275.EventManager&gt;()));
+  gh.lazySingleton&lt;_i586.ChatMessageForgroundNotificationService&gt;(() =&gt;
+      _i586.ChatMessageForgroundNotificationService(gh&lt;_i275.EventManager&gt;()));
+  gh.lazySingleton&lt;_i923.GiftRevealRequestReceived&gt;(
+      () =&gt; _i923.GiftRevealRequestReceived(gh&lt;_i275.EventManager&gt;()));
+  gh.lazySingleton&lt;_i289.GiftRevealRequestRejectedHandler&gt;(
+      () =&gt; _i289.GiftRevealRequestRejectedHandler(gh&lt;_i275.EventManager&gt;()));
+  gh.lazySingleton&lt;_i5.GiftRevealRequestAcceptedHandler&gt;(
+      () =&gt; _i5.GiftRevealRequestAcceptedHandler(gh&lt;_i275.EventManager&gt;()));
+  gh.lazySingleton&lt;_i1019.IPassportModeFacade&gt;(
+      () =&gt; _i20.PassportModeFacadeImpl(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i636.INotificationFacade&gt;(() =&gt; _i3.INotificationFacadeImpl(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i325.InAppPurchaseServeice&gt;(
+      () =&gt; _i325.InAppPurchaseServeice(
+            gh&lt;_i690.InAppPurchase&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i580.IGetBalanceFacade&gt;(() =&gt; _i1021.IGetBalanceFacadeImpl(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+      ));
+  gh.lazySingleton&lt;_i1049.IDailyCheckinFacade&gt;(
+      () =&gt; _i358.IDailyCheckinFacadeImpl(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i13.GetBalanceRemoteDataSorce&gt;(
+      () =&gt; _i13.GetBalanceRemoteDataSorce(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i861.ILikeScreenFacade&gt;(() =&gt; _i947.ILikeScreenFacadImpl(
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+      ));
+  gh.lazySingleton&lt;_i396.IGiftsFacade&gt;(() =&gt; _i828.IGiftsFacadeImpl(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+      ));
+  gh.lazySingleton&lt;_i237.IBoostProfileFacad&gt;(() =&gt; _i894.IBoostProfileFacadImpl(
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+      ));
+  gh.lazySingleton&lt;_i348.FetchProfileActionDoneProfileDataSource&gt;(() =&gt;
+      _i348.FetchProfileActionDoneProfileDataSource(
+          gh&lt;_i434.FetchProfileActionDoneProfileRemoteDataSource&gt;()));
+  gh.lazySingleton&lt;_i134.GetBalanceUsecase&gt;(
+      () =&gt; _i134.GetBalanceUsecase(gh&lt;_i580.IGetBalanceFacade&gt;()));
+  gh.lazySingleton&lt;_i53.BoostRuleExecuter&gt;(
+      () =&gt; appInjectionModule.provideBoostRuleExecutor(
+            gh&lt;_i180.NonPremiumUserBoostRule&gt;(),
+            gh&lt;_i651.PremiumUserBoostRule&gt;(),
+            gh&lt;_i663.TemporaryBoostRestrictionRule&gt;(),
+          ));
+  gh.lazySingleton&lt;_i523.UpdateProfileBlockedStatusSuggestionHandler&gt;(() =&gt;
+      _i523.UpdateProfileBlockedStatusSuggestionHandler(
+          gh&lt;_i1042.MatchingProfileLocalRepository&gt;()));
+  gh.lazySingleton&lt;_i20.MatchingProfileSaveSubscriber&gt;(() =&gt;
+      _i20.MatchingProfileSaveSubscriber(
+          gh&lt;_i1042.MatchingProfileLocalRepository&gt;()));
+  gh.lazySingleton&lt;_i525.OnMessageUpdateHandler&gt;(
+      () =&gt; _i525.OnMessageUpdateHandler(
+            gh&lt;_i764.MessageRepository&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i562.UpdateMessage&gt;(() =&gt; _i562.UpdateMessage(
+        gh&lt;_i764.MessageRepository&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i886.ResetUnSeenMessageCount&gt;(
+      () =&gt; _i886.ResetUnSeenMessageCount(
+            gh&lt;_i764.MessageRepository&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i1047.SaveMessage&gt;(() =&gt; _i1047.SaveMessage(
+        gh&lt;_i764.MessageRepository&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i775.TextMessageUpdateHandler&gt;(
+      () =&gt; _i775.TextMessageUpdateHandler(gh&lt;_i525.OnMessageUpdateHandler&gt;()));
+  gh.lazySingleton&lt;_i61.GiftRuleExecuter&gt;(
+      () =&gt; appInjectionModule.provideGiftRuleExecuter(
+            gh&lt;_i337.GiftSentRule&gt;(),
+            gh&lt;_i1024.GiftSendLimitingRule&gt;(),
+          ));
+  gh.lazySingleton&lt;_i454.IRecentEmotionFacad&gt;(
+      () =&gt; _i116.IRecentEmotionsFacadImpl(
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i460.SharedPreferences&gt;(),
+          ));
+  gh.lazySingleton&lt;_i503.IGiftTrackingFacade&gt;(
+      () =&gt; _i826.IGiftTrackingFacadeImpl(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i811.MessageSendRuleExecutor&gt;(
+      () =&gt; appInjectionModule.provideMessageSendRuleExecutor(
+            gh&lt;_i1009.TemporaryMessageRestrictionRule&gt;(),
+            gh&lt;_i253.NewMatchDisableMessageRule&gt;(),
+            gh&lt;_i766.GiftSendLimitingChatRule&gt;(),
+            gh&lt;_i358.FlashMessageDailyLimitRule&gt;(),
+            gh&lt;_i395.TextMessageSendRule&gt;(),
+            gh&lt;_i370.GiftMessageSendRule&gt;(),
+            gh&lt;_i489.CoinMessageSendRule&gt;(),
+            gh&lt;_i1053.PremiumStickerMessageSendRule&gt;(),
+            gh&lt;_i778.StickerMessageSendRule&gt;(),
+            gh&lt;_i298.PremiumUserFlashMessageSendRule&gt;(),
+            gh&lt;_i889.NonPremiumUserFlashMessageSendRule&gt;(),
+            gh&lt;_i624.FlashMessageUsingCoinRule&gt;(),
+          ));
+  gh.singleton&lt;_i394.CurrentChatProfileSubscriberToMessage&gt;(
+      () =&gt; _i394.CurrentChatProfileSubscriberToMessage(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i764.MessageRepository&gt;(),
+          ));
+  gh.singleton&lt;_i394.GiftRevealRequestedSubscriber&gt;(
+      () =&gt; _i394.GiftRevealRequestedSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i764.MessageRepository&gt;(),
+          ));
+  gh.singleton&lt;_i394.GiftRevealAcceptedSubscriber&gt;(
+      () =&gt; _i394.GiftRevealAcceptedSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i764.MessageRepository&gt;(),
+          ));
+  gh.singleton&lt;_i394.GiftRevealRejectedSubscriber&gt;(
+      () =&gt; _i394.GiftRevealRejectedSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i764.MessageRepository&gt;(),
+          ));
+  gh.lazySingleton&lt;_i878.DeleteChatProfiles&gt;(
+      () =&gt; _i878.DeleteChatProfiles(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i10.UpdateTypeingStatus&gt;(
+      () =&gt; _i10.UpdateTypeingStatus(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i332.ProfileBlockStatusHandler&gt;(() =&gt;
+      _i332.ProfileBlockStatusHandler(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i634.SaveChatProfile&gt;(
+      () =&gt; _i634.SaveChatProfile(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i1013.SaveChatProfileFromMessage&gt;(() =&gt;
+      _i1013.SaveChatProfileFromMessage(
+          gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i1041.MessageRequestStatusHandler&gt;(() =&gt;
+      _i1041.MessageRequestStatusHandler(
+          gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i1053.UpdateLastMessageSend&gt;(() =&gt;
+      _i1053.UpdateLastMessageSend(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i347.UpdateLastMessageReceived&gt;(() =&gt;
+      _i347.UpdateLastMessageReceived(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i625.UpdateUserOnlineStatus&gt;(() =&gt;
+      _i625.UpdateUserOnlineStatus(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i48.GetChatProfiles&gt;(
+      () =&gt; _i48.GetChatProfiles(gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.singleton&lt;_i210.StopeTypeingStatusUpdate&gt;(
+      () =&gt; _i210.StopeTypeingStatusUpdate(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i298.FetchCoins&gt;(() =&gt; _i298.FetchCoins(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i723.SocialLoginStrategy&gt;(() =&gt; _i723.SocialLoginStrategy(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i564.PhoneNumberLoginStrategy&gt;(
+      () =&gt; _i564.PhoneNumberLoginStrategy(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i302.GetRegistrationTraits&gt;(
+      () =&gt; _i302.GetRegistrationTraits(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i44.RequestOtp&gt;(() =&gt; _i44.RequestOtp(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i961.FetchDeliveredMessage&gt;(
+      () =&gt; _i961.FetchDeliveredMessage(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i347.SetMessageReceived&gt;(() =&gt; _i347.SetMessageReceived(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.singleton&lt;_i1002.CurrentChatProfileSubscriberToChatProfile&gt;(
+      () =&gt; _i1002.CurrentChatProfileSubscriberToChatProfile(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i674.LocalChatProfileRepository&gt;(),
+          ));
+  gh.lazySingleton&lt;_i479.UpdateUserVisibilityEvent&gt;(() =&gt;
+      _i479.UpdateUserVisibilityEvent(gh&lt;_i625.UpdateUserOnlineStatus&gt;()));
+  gh.lazySingleton&lt;_i76.MarkMessageAsDelever&gt;(() =&gt; _i76.MarkMessageAsDelever(
+        gh&lt;_i764.MessageRepository&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i125.ISuggestedProfileDetailsFacade&gt;(
+      () =&gt; _i447.ISuggestedProfileDetailsFacadeImpl(
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i468.SuggestedProfileDetailsEventBus&gt;(),
+          ));
+  gh.lazySingleton&lt;_i408.VanishModeEnableEventHanler&gt;(() =&gt;
+      _i408.VanishModeEnableEventHanler(
+          gh&lt;_i674.LocalChatProfileRepository&gt;()));
+  gh.lazySingleton&lt;_i731.ListContactUserRemoteDataSource&gt;(
+      () =&gt; _i731.ListContactUserRemoteDataSource(
+            dioClient: gh&lt;_i90.DioClient&gt;(),
+            runSafely: gh&lt;_i530.RunSafely&gt;(),
+            saveChatProfiles: gh&lt;_i634.SaveChatProfile&gt;(),
+          ));
+  gh.lazySingleton&lt;_i351.IAdvancedFilterFacade&gt;(
+      () =&gt; _i589.IAdvancedFilterFacadeImpl(
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i90.DioClient&gt;(),
+          ));
+  gh.singleton&lt;_i1002.ProfileMatchingSubscriber&gt;(
+      () =&gt; _i1002.ProfileMatchingSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i634.SaveChatProfile&gt;(),
+          ));
+  gh.lazySingleton&lt;_i654.IVarifyAccountFacade&gt;(
+      () =&gt; _i182.IVerifyAccountFacadeImpl(
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i90.DioClient&gt;(),
+          ));
+  gh.lazySingleton&lt;_i946.FetchMatchingProfileLocalDataSource&gt;(
+      () =&gt; _i946.FetchMatchingProfileLocalDataSource(
+            gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i255.FetchProfileActionDoneProfileLocalDataSource&gt;(
+      () =&gt; _i255.FetchProfileActionDoneProfileLocalDataSource(
+            gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i544.OnMessageReceived&gt;(() =&gt; _i544.OnMessageReceived(
+        gh&lt;_i1047.SaveMessage&gt;(),
+        gh&lt;_i347.SetMessageReceived&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+      ));
+  gh.lazySingleton&lt;_i987.GetBalanceHandler&gt;(() =&gt; _i987.GetBalanceHandler(
+        gh&lt;_i213.GetBalanceLocalRepository&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i557.SaveBalanceHandler&gt;(() =&gt; _i557.SaveBalanceHandler(
+        gh&lt;_i213.GetBalanceLocalRepository&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+      ));
+  gh.lazySingleton&lt;_i214.FetchMatchingProfileRemoteDataSource&gt;(
+      () =&gt; _i214.FetchMatchingProfileRemoteDataSource(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i683.SwipeEventBus&gt;(),
+          ));
+  gh.lazySingleton&lt;_i461.SavePopupNotificationTask&gt;(
+      () =&gt; _i461.SavePopupNotificationTask(gh&lt;_i359.SavePopupFcm&gt;()));
+  gh.factory&lt;_i348.AccountBlockedBloc&gt;(
+      () =&gt; _i348.AccountBlockedBloc(gh&lt;_i623.IAccountBlockedFacade&gt;()));
+  gh.factory&lt;_i1051.GiftsBloc&gt;(() =&gt; _i1051.GiftsBloc(
+        gh&lt;_i396.IGiftsFacade&gt;(),
+        gh&lt;_i61.GiftRuleExecuter&gt;(),
+      ));
+  gh.lazySingleton&lt;_i998.GetProfileData&gt;(() =&gt; _i998.GetProfileData(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+      ));
+  gh.lazySingleton&lt;_i889.PusherServeice&gt;(() =&gt; _i889.PusherServeice(
+        gh&lt;_i605.PusherChannelsFlutter&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+        gh&lt;_i843.PusherEventHandlerContext&gt;(),
+      ));
+  gh.lazySingleton&lt;_i351.MessageDeliveredEventHandler&gt;(
+      () =&gt; _i351.MessageDeliveredEventHandler(
+            gh&lt;_i1047.SaveMessage&gt;(),
+            gh&lt;_i579.FindMessageById&gt;(),
+            gh&lt;_i76.MarkMessageAsDelever&gt;(),
+          ));
+  gh.lazySingleton&lt;_i564.SetOneTimeMessageSeen&gt;(
+      () =&gt; _i564.SetOneTimeMessageSeen(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i764.MessageRepository&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+          ));
+  gh.lazySingleton&lt;_i638.SetMessageSeen&gt;(() =&gt; _i638.SetMessageSeen(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i764.MessageRepository&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+      ));
+  gh.lazySingleton&lt;_i454.ProfileSyncHandler&gt;(() =&gt; _i454.ProfileSyncHandler(
+        gh&lt;_i634.SaveChatProfile&gt;(),
+        gh&lt;_i731.ListContactUserRemoteDataSource&gt;(),
+      ));
+  gh.factory&lt;_i977.VerifyAccountBloc&gt;(
+      () =&gt; _i977.VerifyAccountBloc(gh&lt;_i654.IVarifyAccountFacade&gt;()));
+  gh.lazySingleton&lt;_i731.ContactUserLocalDataSource&gt;(
+      () =&gt; _i731.ContactUserLocalDataSource(
+            gh&lt;_i48.GetChatProfiles&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.singleton&lt;_i386.GetBalanceEventSubscriber&gt;(
+      () =&gt; _i386.GetBalanceEventSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i557.SaveBalanceHandler&gt;(),
+          ));
+  gh.lazySingleton&lt;_i20.ProfileBlockStatusEventToHomeSubscriber&gt;(() =&gt;
+      _i20.ProfileBlockStatusEventToHomeSubscriber(
+          gh&lt;_i523.UpdateProfileBlockedStatusSuggestionHandler&gt;()));
+  gh.lazySingleton&lt;_i20.MatchingProfileSwipeSubscriber&gt;(
+      () =&gt; _i20.MatchingProfileSwipeSubscriber(gh&lt;_i134.GetBalanceUsecase&gt;()));
+  gh.lazySingleton&lt;_i1024.FetchMessageRemoteDataSource&gt;(
+      () =&gt; _i1024.FetchMessageRemoteDataSource(
+            dioClient: gh&lt;_i90.DioClient&gt;(),
+            runSafely: gh&lt;_i530.RunSafely&gt;(),
+            saveMessage: gh&lt;_i1047.SaveMessage&gt;(),
+          ));
+  gh.lazySingleton&lt;_i347.GetBalanceLocalDataSource&gt;(
+      () =&gt; _i347.GetBalanceLocalDataSource(
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i987.GetBalanceHandler&gt;(),
+          ));
+  gh.lazySingleton&lt;_i374.SendMessageContext&gt;(() =&gt; _i374.SendMessageContext(
+        gh&lt;_i562.UpdateMessage&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+      ));
+  gh.lazySingleton&lt;_i790.IAuthenticationFacade&gt;(
+      () =&gt; _i966.IAuthenticationFacadeImpl(
+            gh&lt;_i327.GetSocialAccountDetailsContext&gt;(),
+            gh&lt;_i779.LoginContext&gt;(),
+            gh&lt;_i291.Register&gt;(),
+            gh&lt;_i272.VerifyOtp&gt;(),
+            gh&lt;_i302.GetRegistrationTraits&gt;(),
+            gh&lt;_i44.RequestOtp&gt;(),
+            gh&lt;_i215.UpdateProfile&gt;(),
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i460.SharedPreferences&gt;(),
+          ));
+  gh.singleton&lt;_i394.UpdateMessageSubscriber&gt;(
+      () =&gt; _i394.UpdateMessageSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i562.UpdateMessage&gt;(),
+          ));
+  gh.singleton&lt;_i394.MessageSentSuccessSubscriber&gt;(
+      () =&gt; _i394.MessageSentSuccessSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i562.UpdateMessage&gt;(),
+          ));
+  gh.singleton&lt;_i394.MessageSentFaildSubscriber&gt;(
+      () =&gt; _i394.MessageSentFaildSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i562.UpdateMessage&gt;(),
+          ));
+  gh.lazySingleton&lt;_i493.MessageMarkDeliverTask&gt;(
+      () =&gt; _i493.MessageMarkDeliverTask(gh&lt;_i347.SetMessageReceived&gt;()));
+  gh.lazySingleton&lt;_i278.AcceptChatMessageRequest&gt;(
+      () =&gt; _i278.AcceptChatMessageRequest(
+            gh&lt;_i90.DioClient&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+            gh&lt;_i1041.MessageRequestStatusHandler&gt;(),
+          ));
+  gh.lazySingleton&lt;_i458.IProfileFacad&gt;(() =&gt; _i1003.IProfileImpl(
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+        gh&lt;_i998.GetProfileData&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+      ));
+  gh.lazySingleton&lt;_i607.ResendFailedMessage&gt;(() =&gt; _i607.ResendFailedMessage(
+        gh&lt;_i178.LocalDb&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i374.SendMessageContext&gt;(),
+      ));
+  gh.lazySingleton&lt;_i568.TypeingStatusHandler&gt;(
+      () =&gt; _i568.TypeingStatusHandler(gh&lt;_i10.UpdateTypeingStatus&gt;()));
+  gh.lazySingleton&lt;_i291.GetBalanceContext&gt;(() =&gt; _i291.GetBalanceContext(
+        gh&lt;_i347.GetBalanceLocalDataSource&gt;(),
+        gh&lt;_i13.GetBalanceRemoteDataSorce&gt;(),
+      ));
+  gh.lazySingleton&lt;_i617.IFliqCoinsFacade&gt;(() =&gt; _i833.IFliqCoinsFacadeImpl(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i325.InAppPurchaseServeice&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i298.FetchCoins&gt;(),
+      ));
+  gh.lazySingleton&lt;_i1002.ProfileBlockStatusEventToChatProfileSubscriber&gt;(() =&gt;
+      _i1002.ProfileBlockStatusEventToChatProfileSubscriber(
+          gh&lt;_i332.ProfileBlockStatusHandler&gt;()));
+  gh.lazySingleton&lt;_i574.SetMessageDeliverInLocalStorageTask&gt;(
+      () =&gt; _i574.SetMessageDeliverInLocalStorageTask(
+            gh&lt;_i76.MarkMessageAsDelever&gt;(),
+            gh&lt;_i530.RunSafely&gt;(),
+          ));
+  gh.lazySingleton&lt;_i666.NewChatContactEventHandler&gt;(
+      () =&gt; _i666.NewChatContactEventHandler(gh&lt;_i634.SaveChatProfile&gt;()));
+  gh.singleton&lt;_i394.VanishModeStatusToMessagesSubscriber&gt;(
+      () =&gt; _i394.VanishModeStatusToMessagesSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i1047.SaveMessage&gt;(),
+            gh&lt;_i374.SendMessageContext&gt;(),
+          ));
+  gh.lazySingleton&lt;_i395.IFliqPremiumFacad&gt;(() =&gt; _i661.IFliqPremiumFacadImpl(
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+        gh&lt;_i998.GetProfileData&gt;(),
+      ));
+  gh.lazySingleton&lt;_i694.ILuckyDrawFacade&gt;(() =&gt; _i959.ILuckyDrawFacadImpl(
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+        gh&lt;_i998.GetProfileData&gt;(),
+      ));
+  gh.lazySingleton&lt;_i668.ChatEventHandler&gt;(
+      () =&gt; _i668.ChatEventHandler(gh&lt;_i544.OnMessageReceived&gt;()));
+  gh.singleton&lt;_i394.MessageSaveSubscriber&gt;(() =&gt; _i394.MessageSaveSubscriber(
+        gh&lt;_i275.EventManager&gt;(),
+        gh&lt;_i374.SendMessageContext&gt;(),
+        gh&lt;_i210.StopeTypeingStatusUpdate&gt;(),
+      ));
+  gh.lazySingleton&lt;_i490.IHomeFacade&gt;(() =&gt; _i941.IHomeFacadeImpl(
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+        gh&lt;_i70.ProfileSwipeContext&gt;(),
+        gh&lt;_i63.FetchMatchingProfileDataSource&gt;(),
+        gh&lt;_i683.SwipeEventBus&gt;(),
+        gh&lt;_i20.MatchingProfileSaveSubscriber&gt;(),
+        gh&lt;_i20.MatchingProfileSwipeSubscriber&gt;(),
+        gh&lt;_i1042.MatchingProfileLocalRepository&gt;(),
+        gh&lt;_i348.FetchProfileActionDoneProfileDataSource&gt;(),
+        gh&lt;_i20.ProfileBlockStatusEventToHomeSubscriber&gt;(),
+        gh&lt;_i468.SuggestedProfileDetailsEventBus&gt;(),
+      ));
+  gh.singleton&lt;_i386.GetBalanceRequestedEventSubscriber&gt;(
+      () =&gt; _i386.GetBalanceRequestedEventSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i291.GetBalanceContext&gt;(),
+          ));
+  gh.lazySingleton&lt;_i84.IMessagesFacade&gt;(() =&gt; _i959.IMessagesFacadeImpl(
+        gh&lt;_i210.StopeTypeingStatusUpdate&gt;(),
+        gh&lt;_i564.SetOneTimeMessageSeen&gt;(),
+        gh&lt;_i580.FindRecentMessageByProfileId&gt;(),
+        gh&lt;_i188.FetchUnSeenMessageDataSource&gt;(),
+        gh&lt;_i199.FetchLatestMessageDataSource&gt;(),
+        gh&lt;_i394.UpdateMessageSubscriber&gt;(),
+        gh&lt;_i1024.FetchMessageDataSource&gt;(),
+        gh&lt;_i961.FetchDeliveredMessage&gt;(),
+        gh&lt;_i607.ResendFailedMessage&gt;(),
+        gh&lt;_i764.MessageRepository&gt;(),
+        gh&lt;_i1047.SaveMessage&gt;(),
+        gh&lt;_i638.SetMessageSeen&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+        gh&lt;_i579.FindMessageById&gt;(),
+        gh&lt;_i460.SharedPreferences&gt;(),
+      ));
+  gh.factory&lt;_i543.RegisterBloc&gt;(() =&gt; _i543.RegisterBloc(
+        gh&lt;_i790.IAuthenticationFacade&gt;(),
+        gh&lt;_i129.LocationCubit&gt;(),
+      ));
+  gh.singleton&lt;_i1002.MessageToChatProfileSubscriber&gt;(
+      () =&gt; _i1002.MessageToChatProfileSubscriber(
+            gh&lt;_i275.EventManager&gt;(),
+            gh&lt;_i674.LocalChatProfileRepository&gt;(),
+            gh&lt;_i460.SharedPreferences&gt;(),
+            gh&lt;_i278.AcceptChatMessageRequest&gt;(),
+          ));
+  gh.lazySingleton&lt;_i703.ChatSyncHandler&gt;(() =&gt; _i703.ChatSyncHandler(
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i84.IMessagesFacade&gt;(),
+        gh&lt;_i1047.SaveMessage&gt;(),
+        gh&lt;_i347.SetMessageReceived&gt;(),
+      ));
+  gh.factory&lt;_i694.ProfileBloc&gt;(() =&gt; _i694.ProfileBloc(
+        giftRevealRule: gh&lt;_i973.GiftRevealRule&gt;(),
+        iProfileFacad: gh&lt;_i458.IProfileFacad&gt;(),
+        registerBloc: gh&lt;_i543.RegisterBloc&gt;(),
+      ));
+  gh.lazySingleton&lt;_i215.ProfileAndChatCombainedSync&gt;(
+      () =&gt; _i215.ProfileAndChatCombainedSync(
+            gh&lt;_i703.ChatSyncHandler&gt;(),
+            gh&lt;_i454.ProfileSyncHandler&gt;(),
+            gh&lt;_i76.MarkMessageAsDelever&gt;(),
+          ));
+  gh.lazySingleton&lt;_i727.IChatProfileFacade&gt;(() =&gt; _i952.IChatProfileFacadeImpl(
+        gh&lt;_i278.AcceptChatMessageRequest&gt;(),
+        gh&lt;_i215.ProfileAndChatCombainedSync&gt;(),
+        gh&lt;_i1041.MessageRequestStatusHandler&gt;(),
+        gh&lt;_i468.SuggestedProfileDetailsEventBus&gt;(),
+        gh&lt;_i1002.ProfileBlockStatusEventToChatProfileSubscriber&gt;(),
+        gh&lt;_i731.ListContactUserDataSource&gt;(),
+        gh&lt;_i625.UpdateUserOnlineStatus&gt;(),
+        gh&lt;_i463.UpdateVanishModeStatus&gt;(),
+        gh&lt;_i275.EventManager&gt;(),
+        gh&lt;_i530.RunSafely&gt;(),
+        gh&lt;_i90.DioClient&gt;(),
+      ));
+  return getIt;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../domain_core_di_injection.config/domain_core_di_injection.config-library.html">injection.config</a></li>
+    <li class="self-crumb">init function</li>
+</ol>
+
+    <h5>injection.config library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the build method from the ProfileDetailsWidget class, for the Dart programming language.">
+  <title>build method - ProfileDetailsWidget class - profile_details library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../presentation_suggested_profile_details_widgets_profile_details/presentation_suggested_profile_details_widgets_profile_details-library.html">presentation&#47;suggested_profile_details&#47;widgets&#47;profile_details.dart</a></li>
+    <li><a href="../../presentation_suggested_profile_details_widgets_profile_details/ProfileDetailsWidget-class.html">ProfileDetailsWidget</a></li>
+    <li class="self-crumb">build method</li>
+  </ol>
+  <div class="self-name">build</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="presentation_suggested_profile_details_widgets_profile_details&#47;ProfileDetailsWidget-class-sidebar.html"
+    data-below-sidebar="">
+    <div>
+<h1><span class="kind-method">build</span> method 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+  <div>
+    <ol class="annotation-list">
+        <li>@<a href="https://api.flutter.dev/flutter/dart-core/override-constant.html">override</a></li>
+    </ol>
+  </div>
+<span class="returntype"><a href="https://api.flutter.dev/flutter/widgets/Widget-class.html">Widget</a></span>
+<span class="name ">build</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="build-param-context"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span></span></li>
+</ol>)
+
+      <div class="features"><span class="feature">override</span></div>
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Describes the part of the user interface represented by this widget.</p>
+<p>The framework calls this method when this widget is inserted into the tree
+in a given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> and when the dependencies of this widget change
+(e.g., an <a href="https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html">InheritedWidget</a> referenced by this widget changes). This
+method can potentially be called in every frame and should not have any side
+effects beyond building a widget.</p>
+<p>The framework replaces the subtree below this widget with the widget
+returned by this method, either by updating the existing subtree or by
+removing the subtree and inflating a new subtree, depending on whether the
+widget returned by this method can update the root of the existing
+subtree, as determined by calling <a href="https://api.flutter.dev/flutter/widgets/Widget/canUpdate.html">Widget.canUpdate</a>.</p>
+<p>Typically implementations return a newly created constellation of widgets
+that are configured with information from this widget's constructor and
+from the given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>.</p>
+<p>The given <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a> contains information about the location in the
+tree at which this widget is being built. For example, the context
+provides the set of inherited widgets for this location in the tree. A
+given widget might be built with multiple different <a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a>
+arguments over time if the widget is moved around the tree or if the
+widget is inserted into the tree in multiple places at once.</p>
+<p>The implementation of this method must only depend on:</p>
+<ul>
+<li>the fields of the widget, which themselves must not change over time,
+and</li>
+<li>any ambient state obtained from the <code>context</code> using
+<a href="https://api.flutter.dev/flutter/widgets/BuildContext/dependOnInheritedWidgetOfExactType.html">BuildContext.dependOnInheritedWidgetOfExactType</a>.</li>
+</ul>
+<p>If a widget's <a href="../../presentation_suggested_profile_details_widgets_profile_details/ProfileDetailsWidget/build.html">build</a> method is to depend on anything else, use a
+<a href="https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html">StatefulWidget</a> instead.</p>
+<p>See also:</p>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/StatelessWidget-class.html">StatelessWidget</a>, which contains the discussion on performance considerations.</li>
+</ul>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">@override
+Widget build(BuildContext context) {
+  final isPremium = context.isPremium;
+  final loginState = context.read&lt;LoginBloc&gt;().state;
+
+  return BlocBuilder&lt;SuggestedProfileDetailsBloc,
+      SuggestedProfileDetailsState&gt;(
+    builder: (context, state) {
+      final newInterestList = state.viewSuggestedProfile?.lifeStyleActivities
+              .map((e) =&gt; {
+                    &#39;title&#39;: e.name,
+                    &#39;image&#39;: e.iconUrl,
+                    &#39;isNetworkImage&#39;: true
+                  })
+              .toList() ??
+          [];
+
+      final newList = state.viewSuggestedProfile?.personalityTraits
+              .map(
+                (e) =&gt; {
+                  &#39;title&#39;: e.name,
+                },
+              )
+              .toList() ??
+          [];
+      return ColoredBox(
+        color: Theme.of(context).scaffoldBackgroundColor,
+        child: Builder(builder: (context) {
+          if (state.viewSuggestedProfile == null &amp;&amp; state.isLoading) {
+            return Center(
+              child: CustomProgressIndicater(
+                valueColor: context.lightBDarkBPremiumSilver,
+              ),
+            );
+          }
+          return CustomScrollView(
+            controller: scrollController,
+            slivers: [
+              SliverAppBar(
+                elevation: 2,
+                shadowColor: ColorResources.black.withOpacity(0.1),
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                surfaceTintColor: Theme.of(context).scaffoldBackgroundColor,
+                pinned: true,
+                stretch: true,
+                expandedHeight: 430,
+                flexibleSpace: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return FlexibleSpaceBar(
+                      background: Stack(
+                        &#47;&#47; alignment: Alignment.center,
+                        children: [
+                          Positioned(
+                            child: SizedBox(
+                              height: 420,
+                              child: ProfileCard(
+                                imageUrls:
+                                    state.viewSuggestedProfile?.avatars ?? [],
+                                top: 80,
+                                height: 420,
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 0,
+                            right: 0,
+                            bottom:
+                                MediaQuery.of(context).viewInsets.bottom == 0
+                                    ? 6
+                                    : MediaQuery.of(context)
+                                            .viewInsets
+                                            .bottom +
+                                        6, &#47;&#47; Move up when keyboard is open
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 32),
+                              child: IgnorePointer(
+                                ignoring: ignorePointer,
+                                child: ProfileActionButton(
+                                  hasLikeOrSuperLike: state.viewSuggestedProfile
+                                          ?.hasLikeOrSuperLike ==
+                                      false,
+                                  onSwipe: onSwipe,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+                leadingWidth: 60,
+                centerTitle: true,
+                title: GradientText(
+                  &#39;${state.viewSuggestedProfile?.name}&#39;.capitalize,
+                  gradient: context.read&lt;ThemeCubit&gt;().state.themeMode ==
+                          AppThemeMode.dark
+                      ? darkTextGradint
+                      : context.read&lt;ThemeCubit&gt;().state.themeMode ==
+                              AppThemeMode.light
+                          ? lightTextGradint
+                          : premiumTextGradient,
+                  style: context.textStyle.s20.w600,
+                ),
+                leading: Row(
+                  children: [
+                    gap16,
+                    CustomActivityButton(
+                      iconColor: sliverCollapsed ||
+                              MediaQuery.of(context).viewInsets.bottom &gt; 0
+                          ? ColorResources.black
+                          : null,
+                      borderColor: sliverCollapsed ||
+                              MediaQuery.of(context).viewInsets.bottom &gt; 0
+                          ? ColorResources.black
+                          : ColorResources.white,
+                      backgroundColor: sliverCollapsed ||
+                              MediaQuery.of(context).viewInsets.bottom &gt; 0
+                          ? ColorResources.black.withOpacity(0.1)
+                          : ColorResources.white.withOpacity(0.1),
+                      iconPath: AppAssets.swipeDown,
+                      premiumIconColor: true,
+                      onTap: onClose,
+                      enableBorder: true,
+                      iconWidth: 16,
+                      height: 30,
+                      width: 30,
+                    ),
+                  ],
+                ),
+                actions: [
+                  IgnorePointer(
+                    ignoring: ignorePointer,
+                    child: CustomActivityButton(
+                      iconColor: sliverCollapsed ||
+                              MediaQuery.of(context).viewInsets.bottom &gt; 0
+                          ? ColorResources.black
+                          : null,
+                      premiumIconColor: true,
+                      enableBorder: false,
+                      iconPath: AppAssets.more,
+                      width: 32,
+                      onTap: () =&gt; CustomDialog.showBottomCustomDialog(
+                        blure: true,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        chid: MoreActionBottomSheetWidget(),
+                      ),
+                      backgroundColor: Colors.transparent,
+                      filter: ImageFilter.blur(sigmaX: 0.0, sigmaY: 0.0),
+                    ),
+                  ),
+                  gap,
+                ],
+              ),
+              SliverPadding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: defaultPadding),
+                sliver: SliverToBoxAdapter(
+                  child: IgnorePointer(
+                    ignoring: ignorePointer,
+                    child: Column(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        StepperTransition(
+                                          delay: 20,
+                                          child: GradientText(
+                                            &#39;${state.viewSuggestedProfile?.name}&#39;
+                                                .capitalize,
+                                            gradient: context
+                                                        .read&lt;ThemeCubit&gt;()
+                                                        .state
+                                                        .themeMode ==
+                                                    AppThemeMode.dark
+                                                ? darkTextGradint
+                                                : context
+                                                            .read&lt;ThemeCubit&gt;()
+                                                            .state
+                                                            .themeMode ==
+                                                        AppThemeMode.light
+                                                    ? lightTextGradint
+                                                    : premiumTextGradient,
+                                            style: context.textStyle.s22.w600,
+                                          ),
+                                        ),
+                                        &#47;&#47;  Text(
+                                        &#47;&#47;     &#39;Sally Davis&#39;,
+                                        &#47;&#47;     style:
+                                        &#47;&#47;         context.textStyle.s26.w600,
+                                        &#47;&#47;   ),
+                                        gap8,
+                                        if (state.viewSuggestedProfile
+                                                ?.isPremiumCustomer ==
+                                            true  &amp;&amp; state.viewSuggestedProfile?.isSetVipTheme==1)
+                                          const LogoFlipAnimation(
+                                            enablePremium: true,
+                                            bgHight: 25,
+                                            bgWidth: 25,
+                                            svgPath: AppAssets.crown2,
+                                            iconWidth: 16,
+                                          ),
+                                        gap8,
+                                        if (state.viewSuggestedProfile
+                                                ?.accountVerifiedAt !=
+                                            null)
+                                          VerifyedBadge(),
+                                      ],
+                                    ),
+                                    gap8,
+                                    StepperTransition(
+                                      delay: 60,
+                                      child: GradientText(
+                                        &#39;${state.viewSuggestedProfile?.age} | ${state.viewSuggestedProfile?.distance} KM away&#39;,
+                                        gradient: context
+                                                    .read&lt;ThemeCubit&gt;()
+                                                    .state
+                                                    .themeMode ==
+                                                AppThemeMode.dark
+                                            ? darkTextGradint
+                                            : context
+                                                        .read&lt;ThemeCubit&gt;()
+                                                        .state
+                                                        .themeMode ==
+                                                    AppThemeMode.light
+                                                ? lightTextGradint
+                                                : premiumTextGradient,
+                                        style: context.textStyle.s18.w300,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                BlocBuilder&lt;SuggestedProfileCoachmarkCubit,
+                                    SuggestedProfileCoachmarkState&gt;(
+                                  builder: (context, coachMarkState) {
+                                    return CustomRoundButton(
+                                      key: coachMarkState.giftKey,
+                                      iconWidth: 24,
+                                      width: 53,
+                                      height: 53,
+                                      onTap: () {
+                                        Navigator.pushNamed(
+                                          context,
+                                          GiftScreen.routeName,
+                                          arguments: {
+                                            &#39;profileId&#39;: int.parse(
+                                              state.viewSuggestedProfile?.id ??
+                                                  &#39;&#39;,
+                                            ),
+                                          },
+                                        );
+                                      },
+                                      &#47;&#47; iconPath: AppAssets.gift,
+                                      isLottie: true,
+                                      lottiePath: AppAssets.giftBox3,
+                                      colorFilter: isPremium
+                                          ? ColorFilter.mode(
+                                              ColorResources.lightGold,
+                                              BlendMode.srcIn)
+                                          : null,
+                                      backgroundColor:
+                                          ColorResources.mauveBrown,
+                                    );
+                                  },
+                                ),
+                              ],
+                            ),
+                            gap16,
+                            StepperTransition(
+                              delay: 100,
+                              child: Row(
+                                children: [
+                                  if (state.viewSuggestedProfile
+                                          ?.occupationName !=
+                                      null)
+                                    UserInfoCard(
+                                      iconPath: AppAssets.suitcase,
+                                      text:
+                                          &#39;${state.viewSuggestedProfile?.occupationName}&#39;,
+                                    ),
+                                  gap8,
+                                  if (state.viewSuggestedProfile
+                                          ?.educationalQualificationName !=
+                                      null)
+                                    UserInfoCard(
+                                      iconPath: AppAssets.education,
+                                      text:
+                                          &#39;${state.viewSuggestedProfile?.educationalQualificationName}&#39;,
+                                    ),
+                                ],
+                              ),
+                            ),
+                            gap24,
+                            StepperTransition(
+                              delay: 140,
+                              child: UserInfoCard(
+                                prefixWidget: ColorFiltered(
+                                  colorFilter: ColorFilter.mode(
+                                      context.lightBDarkWPremiumW,
+                                      BlendMode.srcIn),
+                                  child: Lottie.asset(AppAssets.eyeBlink,
+                                      width: 30),
+                                ),
+
+                                &#47;&#47; iconPath: AppAssets.eye,
+                                text: &#39;Looking For&#39;,
+                                textStyle: context.textStyle.s12.w600,
+                                color: ColorResources.transparent,
+                                &#47;&#47; width: 120,
+                              ),
+                            ),
+                            gap8,
+                            const StepperTransition(
+                              delay: 180,
+                              child: UserInfoCard(
+                                text: &#39;Long-term relationship&#39;,
+                              ),
+                            ),
+                            gap24,
+                            if (state.viewSuggestedProfile?.bioIntroText !=
+                                null) ...[
+                              StepperTransition(
+                                delay: 220,
+                                child: UserInfoCard(
+                                  iconPath: AppAssets.tagRight,
+                                  text: &#39;People usually feel my vibe as...&#39;,
+                                  textStyle: context.textStyle.s12.w600,
+                                ),
+                              ),
+                              gap8,
+                              &#47;&#47; if (widget.profile?.includedProfile.attributes
+                              &#47;&#47;         ?.bioIntroText !=
+                              &#47;&#47;     null) ...[
+                              &#47;&#47;   StepperTransition(
+                              &#47;&#47;     delay: 260,
+                              &#47;&#47;     child: UserInfoCard(
+                              &#47;&#47;         width: context.getSize.width - 50,
+                              &#47;&#47;         radius: 12,
+                              &#47;&#47;         text: widget.profile?.includedProfile
+                              &#47;&#47;                 .attributes?.bioIntroText ??
+                              &#47;&#47;             &#39;&#39;),
+                              &#47;&#47;   ),
+                              &#47;&#47;   gap24,
+                              &#47;&#47; ],
+                              StepperTransition(
+                                delay: 260,
+                                child: UserInfoCard(
+                                    textStyle: context.textStyle.s12.w400
+                                        .copyWith(
+                                            fontStyle: FontStyle.italic,
+                                            color: ColorResources.slateGray),
+                                    width: context.getSize.width - 50,
+                                    radius: 12,
+                                    text:
+                                        &#39;${state.viewSuggestedProfile?.bioIntroText}&#39;),
+                              ),
+                              gap24,
+                            ],
+                            StepperTransition(
+                              delay: 300,
+                              child: UserInfoCard(
+                                hasPadding: false,
+                                iconPath: AppAssets.userTag,
+                                text: &quot;About Me&quot;,
+                                color: ColorResources.transparent,
+                                textStyle: context.textStyle.s12.w600,
+                              ),
+                            ),
+                            gap8,
+                            StepperTransition(
+                              delay: 340,
+                              child: InfoChip(
+                                data: state.viewSuggestedProfile
+                                        ?.aboutMeAll(loginState) ??
+                                    [],
+                              ),
+                            ),
+                            gap24,
+                            StepperTransition(
+                              delay: 380,
+                              child: UserInfoCard(
+                                iconPath: AppAssets.tagRight,
+                                text: &quot;Interest&quot;,
+                                color: ColorResources.transparent,
+                                textStyle: context.textStyle.s12.w600,
+                              ),
+                            ),
+                            gap8,
+                            StepperTransition(
+                              delay: 420,
+                              child: InfoChip(
+                                data: newInterestList,
+                              ),
+                            ),
+                            gap24,
+                            StepperTransition(
+                              delay: 460,
+                              child: UserInfoCard(
+                                hasPadding: false,
+                                iconPath: AppAssets.tagRight,
+                                text: &quot;Lifestyle&quot;,
+                                color: ColorResources.transparent,
+                                textStyle: context.textStyle.s12.w600,
+                              ),
+                            ),
+                            gap8,
+                            StepperTransition(
+                              delay: 500,
+                              child: InfoChip(
+                                data: newList,
+                              ),
+                            ),
+                            const Gap(40),
+                          ],
+                        ),
+                        &#47;&#47; const Spacer(),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              &#47;&#47; const SliverGap(16)
+            ],
+          );
+        }),
+      );
+    },
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../presentation_suggested_profile_details_widgets_profile_details/presentation_suggested_profile_details_widgets_profile_details-library.html">profile_details</a></li>
+    <li><a href="../../presentation_suggested_profile_details_widgets_profile_details/ProfileDetailsWidget-class.html">ProfileDetailsWidget</a></li>
+    <li class="self-crumb">build method</li>
+</ol>
+
+    <h5>ProfileDetailsWidget class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+</div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

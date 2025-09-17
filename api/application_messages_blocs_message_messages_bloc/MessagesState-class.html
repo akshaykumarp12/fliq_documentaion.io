@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the MessagesState class from the messages_bloc library, for the Dart programming language.">
+  <title>MessagesState class - messages_bloc library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_messages_blocs_message_messages_bloc/application_messages_blocs_message_messages_bloc-library.html">application&#47;messages&#47;blocs&#47;message&#47;messages_bloc.dart</a></li>
+    <li class="self-crumb">MessagesState class</li>
+  </ol>
+  <div class="self-name">MessagesState</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="application_messages_blocs_message_messages_bloc&#47;application_messages_blocs_message_messages_bloc-library-sidebar.html"
+    data-below-sidebar="application_messages_blocs_message_messages_bloc&#47;MessagesState-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">MessagesState</span> class 
+ 
+</h1></div>
+
+    
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+        
+  <dt>Available extensions</dt>
+  <dd><ul class="comma-separated clazz-relationships">
+      <li><a href="../application_messages_blocs_message_messages_bloc/MessagesStateX.html">MessagesStateX</a></li>
+  </ul></dd>
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/freezed-constant.html">freezed</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="MessagesState" class="callable">
+          <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/MessagesState.html">MessagesState</a></span><span class="signature">({<span class="parameter" id="-param-messages"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(&lt;Message&gt;[])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/Message-class.html">Message</a></span>&gt;</span></span> <span class="parameter-name">messages</span>, </span><span class="parameter" id="-param-selecedTextMessage"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(null)</span> <span class="type-annotation"><a href="../domain_message_models_message/TextMessage-class.html">TextMessage</a>?</span> <span class="parameter-name">selecedTextMessage</span>, </span><span class="parameter" id="-param-images"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(&lt;String&gt;[])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">images</span>, </span><span class="parameter" id="-param-selectedImage"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(0)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">selectedImage</span>, </span><span class="parameter" id="-param-vanishModeEnabled"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">vanishModeEnabled</span>, </span><span class="parameter" id="-param-loading"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">loading</span>, </span><span class="parameter" id="-param-isReceiverAcceptRealGift"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isReceiverAcceptRealGift</span>, </span><span class="parameter" id="-param-message"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(&#39;&#39;)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="-param-deleteMessageForAll"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">deleteMessageForAll</span>, </span><span class="parameter" id="-param-longPressedToselect"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">longPressedToselect</span>, </span><span class="parameter" id="-param-selectedMessages"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/Message-class.html">Message</a></span>&gt;</span></span> <span class="parameter-name">selectedMessages</span>, </span><span class="parameter" id="-param-stickerCatalog"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_sticker_catalog_model/StickerCategory-class.html">StickerCategory</a></span>&gt;</span></span> <span class="parameter-name">stickerCatalog</span>, </span><span class="parameter" id="-param-msssageUpdateing"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">msssageUpdateing</span>, </span><span class="parameter" id="-param-realGiftAcceptOption"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/dartz/0.10.1/dartz/Option-class.html">Option</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../application_core_utils_typedefs/Result.html">Result</a></span>&gt;</span></span> <span class="parameter-name">realGiftAcceptOption</span>, </span><span class="parameter" id="-param-messageSentSuccess"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/dartz/0.10.1/dartz/Option-class.html">Option</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/Message-class.html">Message</a></span>&gt;</span></span> <span class="parameter-name">messageSentSuccess</span>, </span><span class="parameter" id="-param-clearTextFormFieldOption"><span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/dartz/0.10.1/dartz/Option-class.html">Option</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">clearTextFormFieldOption</span>, </span><span class="parameter" id="-param-replyModel"><span>required</span> <span class="type-annotation"><a href="../domain_message_models_message/Message-class.html">Message</a>?</span> <span class="parameter-name">replyModel</span>, </span><span class="parameter" id="-param-pusherSettings"><span class="type-annotation"><a href="../domain_message_models_pusher_settings/PusherSettings-class.html">PusherSettings</a>?</span> <span class="parameter-name">pusherSettings</span>, </span><span class="parameter" id="-param-receiverId"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(null)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">receiverId</span>, </span><span class="parameter" id="-param-keywords"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">keywords</span></span>})</span>
+        </dt>
+        <dd>
+          
+            <div class="constructor-modifier features">const</div>
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="MessagesState.initial" class="callable">
+          <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/MessagesState.initial.html">MessagesState.initial</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="canDeleteForEveryOne" class="property">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesStateX/canDeleteForEveryOne.html">canDeleteForEveryOne</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_messages_blocs_message_messages_bloc/MessagesState-class.html">MessagesState</a>,
+        provided by the <a href="../application_messages_blocs_message_messages_bloc/MessagesStateX.html">MessagesStateX</a> extension</span>
+      </p>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="clearTextFormFieldOption" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/clearTextFormFieldOption.html">clearTextFormFieldOption</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/dartz/0.10.1/dartz/Option-class.html">Option</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="copyWith" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/copyWith.html">copyWith</a></span>
+  <span class="signature">&#8594; $MessagesStateCopyWith<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../application_messages_blocs_message_messages_bloc/MessagesState-class.html">MessagesState</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  Create a copy of MessagesState
+with the given fields replaced by the non-null parameter values.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="deleteMessageForAll" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/deleteMessageForAll.html">deleteMessageForAll</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="groupedMessageListByDate" class="property">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesStateX/groupedMessageListByDate.html">groupedMessageListByDate</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/Message-class.html">Message</a></span>&gt;</span></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_messages_blocs_message_messages_bloc/MessagesState-class.html">MessagesState</a>,
+        provided by the <a href="../application_messages_blocs_message_messages_bloc/MessagesStateX.html">MessagesStateX</a> extension</span>
+      </p>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="images" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/images.html">images</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isReceiverAcceptRealGift" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/isReceiverAcceptRealGift.html">isReceiverAcceptRealGift</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="keywords" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/keywords.html">keywords</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="loading" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/loading.html">loading</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="longPressedToselect" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/longPressedToselect.html">longPressedToselect</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="message" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/message.html">message</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="messages" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/messages.html">messages</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/Message-class.html">Message</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="messageSentSuccess" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/messageSentSuccess.html">messageSentSuccess</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/dartz/0.10.1/dartz/Option-class.html">Option</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/Message-class.html">Message</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="msssageUpdateing" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/msssageUpdateing.html">msssageUpdateing</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="pusherSettings" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/pusherSettings.html">pusherSettings</a></span>
+  <span class="signature">&#8594; <a href="../domain_message_models_pusher_settings/PusherSettings-class.html">PusherSettings</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="realGiftAcceptOption" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/realGiftAcceptOption.html">realGiftAcceptOption</a></span>
+  <span class="signature">&#8594; <a href="https://pub.dev/documentation/dartz/0.10.1/dartz/Option-class.html">Option</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../application_core_utils_typedefs/Result.html">Result</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="receiverId" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/receiverId.html">receiverId</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="replyModel" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/replyModel.html">replyModel</a></span>
+  <span class="signature">&#8594; <a href="../domain_message_models_message/Message-class.html">Message</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="selecedTextMessage" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/selecedTextMessage.html">selecedTextMessage</a></span>
+  <span class="signature">&#8594; <a href="../domain_message_models_message/TextMessage-class.html">TextMessage</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="selectedImage" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/selectedImage.html">selectedImage</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="selectedMessages" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/selectedMessages.html">selectedMessages</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/Message-class.html">Message</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="stickerCatalog" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/stickerCatalog.html">stickerCatalog</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_sticker_catalog_model/StickerCategory-class.html">StickerCategory</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="vanishModeEnabled" class="property inherited">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesState/vanishModeEnabled.html">vanishModeEnabled</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="isMessageSelected" class="callable">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesStateX/isMessageSelected.html">isMessageSelected</a></span><span class="signature">(<wbr><span class="parameter" id="isMessageSelected-param-message"><span class="type-annotation"><a href="../domain_message_models_message/Message-class.html">Message</a></span> <span class="parameter-name">message</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_messages_blocs_message_messages_bloc/MessagesState-class.html">MessagesState</a>,
+        provided by the <a href="../application_messages_blocs_message_messages_bloc/MessagesStateX.html">MessagesStateX</a> extension</span>
+      </p>
+  
+  
+
+</dd>
+
+        <dt id="maskKeywords" class="callable">
+  <span class="name"><a href="../application_messages_blocs_message_messages_bloc/MessagesStateX/maskKeywords.html">maskKeywords</a></span><span class="signature">(<wbr><span class="parameter" id="maskKeywords-param-message"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">message</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_messages_blocs_message_messages_bloc/MessagesState-class.html">MessagesState</a>,
+        provided by the <a href="../application_messages_blocs_message_messages_bloc/MessagesStateX.html">MessagesStateX</a> extension</span>
+      </p>
+  
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_messages_blocs_message_messages_bloc/application_messages_blocs_message_messages_bloc-library.html">messages_bloc</a></li>
+    <li class="self-crumb">MessagesState class</li>
+</ol>
+
+    <h5>messages_bloc library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

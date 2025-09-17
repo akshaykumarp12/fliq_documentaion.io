@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ProfileState class from the profile_bloc library, for the Dart programming language.">
+  <title>ProfileState class - profile_bloc library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_profile_profile_bloc/application_profile_profile_bloc-library.html">application&#47;profile&#47;profile_bloc.dart</a></li>
+    <li class="self-crumb">ProfileState class</li>
+  </ol>
+  <div class="self-name">ProfileState</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar="application_profile_profile_bloc&#47;application_profile_profile_bloc-library-sidebar.html"
+    data-below-sidebar="application_profile_profile_bloc&#47;ProfileState-class-sidebar.html">
+    <div>
+<h1><span class="kind-class">ProfileState</span> class 
+ 
+</h1></div>
+
+    
+
+
+    <section>
+      <dl class="dl-horizontal">
+        
+
+        
+        
+
+
+        
+  <dt>Available extensions</dt>
+  <dd><ul class="comma-separated clazz-relationships">
+      <li><a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a></li>
+  </ul></dd>
+        
+  <dt>Annotations</dt>
+  <dd>
+    <ul class="annotation-list clazz-relationships">
+        <li>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/freezed-constant.html">freezed</a></li>
+    </ul>
+  </dd>
+
+
+      </dl>
+    </section>
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+    <dl class="constructor-summary-list">
+        <dt id="ProfileState" class="callable">
+          <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ProfileState.html">ProfileState</a></span><span class="signature">({<span class="parameter" id="-param-isLoading"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isLoading</span>, </span><span class="parameter" id="-param-autovalidate"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(AutovalidateMode.disabled)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/AutovalidateMode.html">AutovalidateMode</a></span> <span class="parameter-name">autovalidate</span>, </span><span class="parameter" id="-param-address"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">address</span>, </span><span class="parameter" id="-param-intrest"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">intrest</span>, </span><span class="parameter" id="-param-plan"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">plan</span>, </span><span class="parameter" id="-param-ghostModeEnable"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">ghostModeEnable</span>, </span><span class="parameter" id="-param-pushNotificationEnable"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(true)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">pushNotificationEnable</span>, </span><span class="parameter" id="-param-giftRecievingEnabled"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">giftRecievingEnabled</span>, </span><span class="parameter" id="-param-recieveFlashMessageEnabled"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">recieveFlashMessageEnabled</span>, </span><span class="parameter" id="-param-enableLastSeen"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableLastSeen</span>, </span><span class="parameter" id="-param-enableReadReceipts"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">enableReadReceipts</span>, </span><span class="parameter" id="-param-helpCenterImage"><span class="type-annotation"><a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span> <span class="parameter-name">helpCenterImage</span>, </span><span class="parameter" id="-param-interestedGender"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">interestedGender</span>, </span><span class="parameter" id="-param-contactsSelected"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/flutter_contacts/1.1.9+2/flutter_contacts/Contact-class.html">Contact</a></span>&gt;</span></span> <span class="parameter-name">contactsSelected</span>, </span><span class="parameter" id="-param-contacts"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/flutter_contacts/1.1.9+2/flutter_contacts/Contact-class.html">Contact</a></span>&gt;</span></span> <span class="parameter-name">contacts</span>, </span><span class="parameter" id="-param-contactsLoading"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">contactsLoading</span>, </span><span class="parameter" id="-param-verificationVideo"><span class="type-annotation"><a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span> <span class="parameter-name">verificationVideo</span>, </span><span class="parameter" id="-param-verifyingImage"><span class="type-annotation"><a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span> <span class="parameter-name">verifyingImage</span>, </span><span class="parameter" id="-param-idProofImage"><span class="type-annotation"><a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span> <span class="parameter-name">idProofImage</span>, </span><span class="parameter" id="-param-emotionsList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_emotions_model/EmotionsModel-class.html">EmotionsModel</a></span>&gt;</span>?</span> <span class="parameter-name">emotionsList</span>, </span><span class="parameter" id="-param-searchPlaces"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../application_core_serveice_location_serveice_location_model/PlaceResult-class.html">PlaceResult</a></span>&gt;</span>?</span> <span class="parameter-name">searchPlaces</span>, </span><span class="parameter" id="-param-profileDetails"><span class="type-annotation"><a href="../domain_authentication_models_user_detail_model/UserDetailModel-class.html">UserDetailModel</a>?</span> <span class="parameter-name">profileDetails</span>, </span><span class="parameter" id="-param-dislikedList"><span class="type-annotation"><a href="../domain_profile_model_actions_model/ActionsModel-class.html">ActionsModel</a>?</span> <span class="parameter-name">dislikedList</span>, </span><span class="parameter" id="-param-likedList"><span class="type-annotation"><a href="../domain_profile_model_actions_model/ActionsModel-class.html">ActionsModel</a>?</span> <span class="parameter-name">likedList</span>, </span><span class="parameter" id="-param-superlikedList"><span class="type-annotation"><a href="../domain_profile_model_actions_model/ActionsModel-class.html">ActionsModel</a>?</span> <span class="parameter-name">superlikedList</span>, </span><span class="parameter" id="-param-faqList"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_faq_model/FaqData-class.html">FaqData</a></span>&gt;</span></span> <span class="parameter-name">faqList</span>, </span><span class="parameter" id="-param-profileImageUrls"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">profileImageUrls</span>, </span><span class="parameter" id="-param-ticketTitle"><span>required</span> <span class="type-annotation"><a href="../domain_core_failures_value_object_value_object/TicketTitle-class.html">TicketTitle</a></span> <span class="parameter-name">ticketTitle</span>, </span><span class="parameter" id="-param-ticketMessage"><span>required</span> <span class="type-annotation"><a href="../domain_core_failures_value_object_value_object/TicketMessage-class.html">TicketMessage</a></span> <span class="parameter-name">ticketMessage</span>, </span><span class="parameter" id="-param-faqCategories"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_faq_category_model/FaqCategoryModel-class.html">FaqCategoryModel</a></span>&gt;</span></span> <span class="parameter-name">faqCategories</span>, </span><span class="parameter" id="-param-ticketList"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_ticket_model/TicketData-class.html">TicketData</a></span>&gt;</span></span> <span class="parameter-name">ticketList</span>, </span><span class="parameter" id="-param-sendGiftDetails"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_send_gift_detail_model/GiftOrder-class.html">GiftOrder</a></span>&gt;</span></span> <span class="parameter-name">sendGiftDetails</span>, </span><span class="parameter" id="-param-receivedGiftDetails"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_send_gift_detail_model/GiftOrder-class.html">GiftOrder</a></span>&gt;</span></span> <span class="parameter-name">receivedGiftDetails</span>, </span><span class="parameter" id="-param-sendCoinDetails"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>([])</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/CoinMessage-class.html">CoinMessage</a></span>&gt;</span></span> <span class="parameter-name">sendCoinDetails</span>, </span><span class="parameter" id="-param-ticketRisingDetails"><span class="type-annotation"><a href="../domain_profile_model_ticket_rising_model/TicketRisingModel-class.html">TicketRisingModel</a>?</span> <span class="parameter-name">ticketRisingDetails</span>, </span><span class="parameter" id="-param-ticketCode"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(&#39;&#39;)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">ticketCode</span>, </span><span class="parameter" id="-param-subscriptionPlanList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/in_app_purchase_platform_interface/1.4.0/in_app_purchase_platform_interface/ProductDetails-class.html">ProductDetails</a></span>&gt;</span>?</span> <span class="parameter-name">subscriptionPlanList</span>, </span><span class="parameter" id="-param-profileDetailsChanged"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">profileDetailsChanged</span>, </span><span class="parameter" id="-param-selectedLocation"><span class="type-annotation"><a href="../application_core_serveice_location_serveice_location_model/Geometry-class.html">Geometry</a>?</span> <span class="parameter-name">selectedLocation</span>, </span><span class="parameter" id="-param-blockedContactList"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_blocked_contact_data_model/BlockedContactData-class.html">BlockedContactData</a></span>&gt;</span>?</span> <span class="parameter-name">blockedContactList</span>, </span><span class="parameter" id="-param-ghostModeValue"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">ghostModeValue</span>, </span><span class="parameter" id="-param-selectedPlaceId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">selectedPlaceId</span>, </span><span class="parameter" id="-param-isOnlineStatusEnabled"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isOnlineStatusEnabled</span>, </span><span class="parameter" id="-param-isReadReceiptsEnabled"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(false)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">isReadReceiptsEnabled</span>, </span><span class="parameter" id="-param-boostCountDown"><span>@<a href="https://pub.dev/documentation/freezed_annotation/2.4.4/freezed_annotation/Default-class.html">Default</a>(&#39;&#39;)</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">boostCountDown</span></span>})</span>
+        </dt>
+        <dd>
+          
+            <div class="constructor-modifier features">const</div>
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="ProfileState.initial" class="callable">
+          <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ProfileState.initial.html">ProfileState.initial</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-properties">
+    <h2>Properties</h2>
+    <dl class="properties">
+        <dt id="address" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/address.html">address</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="autovalidate" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/autovalidate.html">autovalidate</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/widgets/AutovalidateMode.html">AutovalidateMode</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="blockedContactList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/blockedContactList.html">blockedContactList</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_blocked_contact_data_model/BlockedContactData-class.html">BlockedContactData</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="blockedNumbers" class="property">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileStateX/blockedNumbers.html">blockedNumbers</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>&gt;</span>?</span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a>,
+        provided by the <a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a> extension</span>
+      </p>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="boostCountDown" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/boostCountDown.html">boostCountDown</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="coinBalance" class="property">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileStateX/coinBalance.html">coinBalance</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a>,
+        provided by the <a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a> extension</span>
+      </p>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="contacts" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/contacts.html">contacts</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/flutter_contacts/1.1.9+2/flutter_contacts/Contact-class.html">Contact</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="contactsLoading" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/contactsLoading.html">contactsLoading</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="contactsSelected" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/contactsSelected.html">contactsSelected</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/flutter_contacts/1.1.9+2/flutter_contacts/Contact-class.html">Contact</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="copyWith" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/copyWith.html">copyWith</a></span>
+  <span class="signature">&#8594; $ProfileStateCopyWith<span class="signature">&lt;<wbr><span class="type-parameter"><a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  Create a copy of ProfileState
+with the given fields replaced by the non-null parameter values.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="dislikedList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/dislikedList.html">dislikedList</a></span>
+  <span class="signature">&#8594; <a href="../domain_profile_model_actions_model/ActionsModel-class.html">ActionsModel</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="emotionsList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/emotionsList.html">emotionsList</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_emotions_model/EmotionsModel-class.html">EmotionsModel</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="enableLastSeen" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/enableLastSeen.html">enableLastSeen</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="enableReadReceipts" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/enableReadReceipts.html">enableReadReceipts</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="faqCategories" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/faqCategories.html">faqCategories</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_faq_category_model/FaqCategoryModel-class.html">FaqCategoryModel</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="faqList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/faqList.html">faqList</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_faq_model/FaqData-class.html">FaqData</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ghostModeEnable" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ghostModeEnable.html">ghostModeEnable</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ghostModeValue" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ghostModeValue.html">ghostModeValue</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="giftRecievingEnabled" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/giftRecievingEnabled.html">giftRecievingEnabled</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="helpCenterImage" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/helpCenterImage.html">helpCenterImage</a></span>
+  <span class="signature">&#8594; <a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="idProofImage" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/idProofImage.html">idProofImage</a></span>
+  <span class="signature">&#8594; <a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="interestedGender" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/interestedGender.html">interestedGender</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="intrest" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/intrest.html">intrest</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isLoading" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/isLoading.html">isLoading</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isOnlineStatusEnabled" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/isOnlineStatusEnabled.html">isOnlineStatusEnabled</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isReadReceiptsEnabled" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/isReadReceiptsEnabled.html">isReadReceiptsEnabled</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isticketMessageValid" class="property">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileStateX/isticketMessageValid.html">isticketMessageValid</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a>,
+        provided by the <a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a> extension</span>
+      </p>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isticketTitleValid" class="property">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileStateX/isticketTitleValid.html">isticketTitleValid</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a>,
+        provided by the <a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a> extension</span>
+      </p>
+  
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="likedList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/likedList.html">likedList</a></span>
+  <span class="signature">&#8594; <a href="../domain_profile_model_actions_model/ActionsModel-class.html">ActionsModel</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="plan" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/plan.html">plan</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="profileDetails" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/profileDetails.html">profileDetails</a></span>
+  <span class="signature">&#8594; <a href="../domain_authentication_models_user_detail_model/UserDetailModel-class.html">UserDetailModel</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="profileDetailsChanged" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/profileDetailsChanged.html">profileDetailsChanged</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="profileImageUrls" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/profileImageUrls.html">profileImageUrls</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="pushNotificationEnable" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/pushNotificationEnable.html">pushNotificationEnable</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="receivedGiftDetails" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/receivedGiftDetails.html">receivedGiftDetails</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_send_gift_detail_model/GiftOrder-class.html">GiftOrder</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="recieveFlashMessageEnabled" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/recieveFlashMessageEnabled.html">recieveFlashMessageEnabled</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="searchPlaces" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/searchPlaces.html">searchPlaces</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../application_core_serveice_location_serveice_location_model/PlaceResult-class.html">PlaceResult</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="selectedLocation" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/selectedLocation.html">selectedLocation</a></span>
+  <span class="signature">&#8594; <a href="../application_core_serveice_location_serveice_location_model/Geometry-class.html">Geometry</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="selectedPlaceId" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/selectedPlaceId.html">selectedPlaceId</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sendCoinDetails" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/sendCoinDetails.html">sendCoinDetails</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_message_models_message/CoinMessage-class.html">CoinMessage</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="sendGiftDetails" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/sendGiftDetails.html">sendGiftDetails</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_send_gift_detail_model/GiftOrder-class.html">GiftOrder</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="subscriptionPlanList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/subscriptionPlanList.html">subscriptionPlanList</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://pub.dev/documentation/in_app_purchase_platform_interface/1.4.0/in_app_purchase_platform_interface/ProductDetails-class.html">ProductDetails</a></span>&gt;</span>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="superlikedList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/superlikedList.html">superlikedList</a></span>
+  <span class="signature">&#8594; <a href="../domain_profile_model_actions_model/ActionsModel-class.html">ActionsModel</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ticketCode" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ticketCode.html">ticketCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ticketList" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ticketList.html">ticketList</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../domain_profile_model_ticket_model/TicketData-class.html">TicketData</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ticketMessage" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ticketMessage.html">ticketMessage</a></span>
+  <span class="signature">&#8594; <a href="../domain_core_failures_value_object_value_object/TicketMessage-class.html">TicketMessage</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ticketRisingDetails" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ticketRisingDetails.html">ticketRisingDetails</a></span>
+  <span class="signature">&#8594; <a href="../domain_profile_model_ticket_rising_model/TicketRisingModel-class.html">TicketRisingModel</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="ticketTitle" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/ticketTitle.html">ticketTitle</a></span>
+  <span class="signature">&#8594; <a href="../domain_core_failures_value_object_value_object/TicketTitle-class.html">TicketTitle</a></span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="verificationVideo" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/verificationVideo.html">verificationVideo</a></span>
+  <span class="signature">&#8594; <a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="verifyingImage" class="property inherited">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileState/verifyingImage.html">verifyingImage</a></span>
+  <span class="signature">&#8594; <a href="../application_core_serveice_file_upload_service_models_upload_document/UploadDocument-class.html">UploadDocument</a>?</span>
+  
+
+</dt>
+<dd class="inherited">
+  
+  <div class="features"><span class="feature">no setter</span><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="emotionById" class="callable">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileStateX/emotionById.html">emotionById</a></span><span class="signature">(<wbr><span class="parameter" id="emotionById-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="../domain_profile_model_emotions_model/EmotionsModel-class.html">EmotionsModel</a>?</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a>,
+        provided by the <a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a> extension</span>
+      </p>
+  
+  
+
+</dd>
+
+        <dt id="isContactSelected" class="callable">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileStateX/isContactSelected.html">isContactSelected</a></span><span class="signature">(<wbr><span class="parameter" id="isContactSelected-param-contact"><span class="type-annotation"><a href="https://pub.dev/documentation/flutter_contacts/1.1.9+2/flutter_contacts/Contact-class.html">Contact</a></span> <span class="parameter-name">contact</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a>,
+        provided by the <a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a> extension</span>
+      </p>
+  
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="profileImages" class="callable">
+  <span class="name"><a href="../application_profile_profile_bloc/ProfileStateX/profileImages.html">profileImages</a></span><span class="signature">(<wbr><span class="parameter" id="profileImages-param-userDetails"><span class="type-annotation"><a href="../domain_authentication_models_user_detail_model/UserDetailModel-class.html">UserDetailModel</a></span> <span class="parameter-name">userDetails</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../application_profile_profile_bloc/ProfileState-class.html">ProfileState</a>,
+        provided by the <a href="../application_profile_profile_bloc/ProfileStateX.html">ProfileStateX</a> extension</span>
+      </p>
+  
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_profile_profile_bloc/application_profile_profile_bloc-library.html">profile_bloc</a></li>
+    <li class="self-crumb">ProfileState class</li>
+</ol>
+
+    <h5>profile_bloc library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div>
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

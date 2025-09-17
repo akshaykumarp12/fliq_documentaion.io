@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the Subscription.fromJson constructor from Class Subscription from the subscription_plan_model library, for the Dart programming language.">
+  <title>Subscription.fromJson constructor - Subscription - subscription_plan_model library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../domain_fliq_premium_models_subscription_plan_model/domain_fliq_premium_models_subscription_plan_model-library.html">domain&#47;fliq_premium&#47;models&#47;subscription_plan_model.dart</a></li>
+    <li><a href="../../domain_fliq_premium_models_subscription_plan_model/Subscription-class.html">Subscription</a></li>
+    <li class="self-crumb">Subscription.fromJson factory constructor</li>
+  </ol>
+  <div class="self-name">Subscription.fromJson</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="domain_fliq_premium_models_subscription_plan_model&#47;Subscription-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">Subscription.fromJson</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">Subscription.fromJson</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span></li>
+</ol>)
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">factory Subscription.fromJson(Map&lt;String, dynamic&gt; json) {
+  return Subscription(
+    type: json[&quot;type&quot;],
+    id: json[&quot;id&quot;],
+    typeId: json[&quot;type_id&quot;],
+    consoleType: json[&quot;console_type&quot;],
+    consoleProductId: json[&quot;console_product_id&quot;],
+    name: json[&quot;name&quot;],
+    description: json[&quot;description&quot;],
+    planDuration: json[&quot;plan_duration&quot;],
+    durationType: json[&quot;duration_type&quot;],
+    price: json[&quot;price&quot;],
+    offerPercentage: json[&quot;offer_percentage&quot;],
+    offerPrice: json[&quot;offer_price&quot;],
+    isActive: json[&quot;is_active&quot;],
+    isUserSwipeEnabled: json[&quot;is_user_swipe_enabled&quot;],
+    userSwipeType: json[&quot;user_swipe_type&quot;],
+    isEnabledBoostsPerWeek: json[&quot;is_enabled_boosts_per_week&quot;],
+    boostsPerWeek: json[&quot;boosts_per_week&quot;],
+    boostsPerWeekDuration: json[&quot;boosts_per_week_duration&quot;],
+    isSuperLikeEnabled: json[&quot;is_super_like_enabled&quot;],
+    superLikePerWeekLimit: json[&quot;super_like_per_week_limit&quot;],
+    messageTypeEnabled: json[&quot;message_type_enabled&quot;],
+    messageTypeLimit: json[&quot;message_type_limit&quot;],
+    isEnabledSocialMediaLinking: json[&quot;is_enabled_social_media_linking&quot;],
+    isEnabledSuperStickers: json[&quot;is_enabled_super_stickers&quot;],
+    isEnabledProfileStalkingView: json[&quot;is_enabled_profile_stalking_view&quot;],
+    isEnabledMessageBeforeMatching:
+        json[&quot;is_enabled_message_before_matching&quot;],
+    isEnabledUnlimitedRewind: json[&quot;is_enabled_unlimited_rewind&quot;],
+    isEnabledUnlimitedPassport: json[&quot;is_enabled_unlimited_passport&quot;],
+    isEnabledSetMorePreferences: json[&quot;is_enabled_set_more_preferences&quot;],
+    isEnabledSeeGiftSender: json[&quot;is_enabled_see_gift_sender&quot;],
+    isEnabledPrioritizedLikes: json[&quot;is_enabled_prioritized_likes&quot;],
+    isEnabledProfileControl: json[&quot;is_enabled_profile_control&quot;],
+    isEnabledGhostMode: json[&quot;is_enabled_ghost_mode&quot;],
+    isEnabledGhostModeWithCoin: json[&quot;is_enabled_ghost_mode_with_coin&quot;],
+    createdBy: json[&quot;created_by&quot;],
+    updatedBy: json[&quot;updated_by&quot;],
+    createdAt: DateTime.tryParse(json[&quot;created_at&quot;] ?? &quot;&quot;),
+    updatedAt: DateTime.tryParse(json[&quot;updated_at&quot;] ?? &quot;&quot;),
+    imageUrl: json[&quot;image_url&quot;],
+    featuresArray: json[&quot;features_array&quot;] == null
+        ? []
+        : List&lt;String&gt;.from(json[&quot;features_array&quot;]!.map((x) =&gt; x)),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../domain_fliq_premium_models_subscription_plan_model/domain_fliq_premium_models_subscription_plan_model-library.html">subscription_plan_model</a></li>
+    <li><a href="../../domain_fliq_premium_models_subscription_plan_model/Subscription-class.html">Subscription</a></li>
+    <li class="self-crumb">Subscription.fromJson factory constructor</li>
+</ol>
+
+    <h5>Subscription class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

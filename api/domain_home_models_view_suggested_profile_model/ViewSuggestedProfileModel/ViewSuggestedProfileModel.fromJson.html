@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the ViewSuggestedProfileModel.fromJson constructor from Class ViewSuggestedProfileModel from the view_suggested_profile_model library, for the Dart programming language.">
+  <title>ViewSuggestedProfileModel.fromJson constructor - ViewSuggestedProfileModel - view_suggested_profile_model library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../domain_home_models_view_suggested_profile_model/domain_home_models_view_suggested_profile_model-library.html">domain&#47;home&#47;models&#47;view_suggested_profile_model.dart</a></li>
+    <li><a href="../../domain_home_models_view_suggested_profile_model/ViewSuggestedProfileModel-class.html">ViewSuggestedProfileModel</a></li>
+    <li class="self-crumb">ViewSuggestedProfileModel.fromJson factory constructor</li>
+  </ol>
+  <div class="self-name">ViewSuggestedProfileModel.fromJson</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="domain_home_models_view_suggested_profile_model&#47;ViewSuggestedProfileModel-class-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-constructor">ViewSuggestedProfileModel.fromJson</span> constructor 
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+      <span class="name ">ViewSuggestedProfileModel.fromJson</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span></li>
+</ol>)
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">factory ViewSuggestedProfileModel.fromJson(Map&lt;String, dynamic&gt; json) {
+  return ViewSuggestedProfileModel(
+    isFlashOver24hours: json[&#39;is_flash_over_24hours&#39;],
+    blockedUserIds: json[&#39;blockedContacts&#39;] != null
+        ? (json[&#39;blockedContacts&#39;] as List)
+            .map((e) =&gt; e[&#39;requester_id&#39;] as int)
+            .toList()
+        : [],
+    hasLikeOrSuperLike: json[&#39;has_like_or_super_like&#39;],
+    accountVerifiedAt: DateTime.tryParse(json[&quot;account_verified_at&quot;] ?? &#39;&#39;),
+    bioIntroText: json[&quot;bio_intro_text&quot;],
+    type: json[&quot;type&quot;],
+    id: json[&quot;id&quot;],
+    name: json[&quot;name&quot;],
+    username: json[&quot;username&quot;],
+    isSetVipTheme: json[&#39;is_set_vip_theme&#39;],
+    email: json[&quot;email&quot;],
+    dateOfBirth: DateTime.tryParse(json[&quot;date_of_birth&quot;] ?? &quot;&quot;),
+    phone: json[&quot;phone&quot;],
+    gender: json[&quot;gender&quot;],
+    countryId: json[&quot;country_id&quot;],
+    countryName: json[&quot;country_name&quot;],
+    stateId: json[&quot;state_id&quot;],
+    stateName: json[&quot;state_name&quot;],
+    cityId: json[&quot;city_id&quot;],
+    cityName: json[&quot;city_name&quot;],
+    customCityName: json[&quot;custom_city_name&quot;],
+    address: json[&quot;address&quot;],
+    zip: json[&quot;zip&quot;],
+    isActive: json[&quot;is_active&quot;],
+    coinBalance: json[&quot;coin_balance&quot;],
+    customerCode: json[&quot;customer_code&quot;],
+    referredUserName: json[&quot;referred_user_name&quot;],
+    isPremiumCustomer: json[&quot;is_premium_customer&quot;],
+    isOnline: json[&quot;is_online&quot;],
+    isProfilePreferencesCompleted: json[&quot;is_profile_preferences_completed&quot;],
+    profileCompletionPercentage: json[&quot;profile_completion_percentage&quot;],
+    isInstagramConnected: json[&quot;is_instagram_connected&quot;],
+    preferredGender: json[&quot;preferred_gender&quot;],
+    remainingSwipeLimit: json[&quot;remaining_swipe_limit&quot;],
+    resetSwipeLimitAt: DateTime.tryParse(json[&quot;reset_swipe_limit_at&quot;] ?? &quot;&quot;),
+    remainingSuperLikeLimit: json[&quot;remaining_super_like_limit&quot;],
+    resetSuperLikeLimitAt:
+        DateTime.tryParse(json[&quot;reset_super_like_limit_at&quot;] ?? &quot;&quot;),
+    remainingFlashMessageLimit: json[&quot;remaining_flash_message_limit&quot;],
+    resetFlashMessageLimitAt:
+        DateTime.tryParse(json[&quot;reset_flash_message_limit_at&quot;] ?? &quot;&quot;),
+    remainingBoostLimit: json[&quot;remaining_boost_limit&quot;],
+    currentLocation: json[&quot;current_location&quot;],
+    currentLatitude: json[&quot;current_latitude&quot;],
+    currentLongitude: json[&quot;current_longitude&quot;],
+    heightInCm: json[&quot;height_in_cm&quot;],
+    zodiacSignId: json[&quot;zodiac_sign_id&quot;],
+    zodiacSignName: json[&quot;zodiac_sign_name&quot;],
+    relationshipStatusId: json[&quot;relationship_status_id&quot;],
+    relationshipStatusName: json[&quot;relationship_status_name&quot;],
+    religionId: json[&quot;religion_id&quot;],
+    religionName: json[&quot;religion_name&quot;],
+    drinkingHabitId: json[&quot;drinking_habit_id&quot;],
+    drinkingHabitName: json[&quot;drinking_habit_name&quot;],
+    smokingHabitId: json[&quot;smoking_habit_id&quot;],
+    smokingHabitName: json[&quot;smoking_habit_name&quot;],
+    sexualOrientationId: json[&quot;sexual_orientation_id&quot;],
+    sexualOrientationName: json[&quot;sexual_orientation_name&quot;],
+    educationalQualificationId: json[&quot;educational_qualification_id&quot;],
+    educationalQualificationName: json[&quot;educational_qualification_name&quot;],
+    nativeLanguageId: json[&quot;native_language_id&quot;],
+    nativeLanguageName: json[&quot;native_language_name&quot;],
+    occupationId: json[&quot;occupation_id&quot;],
+    occupationName: json[&quot;occupation_name&quot;],
+    isRealGiftsAccepted: json[&quot;is_real_gifts_accepted&quot;],
+    isGenderRevealed: json[&quot;is_gender_revealed&quot;],
+    isHeightRevealed: json[&quot;is_height_revealed&quot;],
+    isReligionRevealed: json[&quot;is_religion_revealed&quot;],
+    isDrinkingHabitRevealed: json[&quot;is_drinking_habit_revealed&quot;],
+    isSmokingHabitRevealed: json[&quot;is_smoking_habit_revealed&quot;],
+    isSexualOrientationRevealed: json[&quot;is_sexual_orientation_revealed&quot;],
+    isEducationalQualificationRevealed:
+        json[&quot;is_educational_qualification_revealed&quot;],
+    isPersonalityTraitsRevealed: json[&quot;is_personality_traits_revealed&quot;],
+    isLifestyleActivitiesRevealed: json[&quot;is_lifestyle_activities_revealed&quot;],
+    isContactDiscoveryEnabled: json[&quot;is_contact_discovery_enabled&quot;],
+    isGhostModeEnabled: json[&quot;is_ghost_mode_enabled&quot;],
+    isDarkModeEnabled: json[&quot;is_dark_mode_enabled&quot;],
+    isReceivingPushNotifications: json[&quot;is_receiving_push_notifications&quot;],
+    isReceivingFlashMessages: json[&quot;is_receiving_flash_messages&quot;],
+    isLastSeenEnabled: json[&quot;is_last_seen_enabled&quot;],
+    isOnlineStatusEnabled: json[&quot;is_online_status_enabled&quot;],
+    isReadReceiptsEnabled: json[&quot;is_read_receipts_enabled&quot;],
+    isProfileHiddenFromSearch: json[&quot;is_profile_hidden_from_search&quot;],
+    isProfileReported: json[&quot;is_profile_reported&quot;],
+    isProfileStriked: json[&quot;is_profile_striked&quot;],
+    isProfileBlacklisted: json[&quot;is_profile_blacklisted&quot;],
+    isAccountSuspended: json[&quot;is_account_suspended&quot;],
+    updatedBy: json[&quot;updated_by&quot;],
+    updatedByName: json[&quot;updated_by_name&quot;],
+    createdAt: DateTime.tryParse(json[&quot;created_at&quot;] ?? &quot;&quot;),
+    updatedAt: DateTime.tryParse(json[&quot;updated_at&quot;] ?? &quot;&quot;),
+    distance: double.tryParse(json[&quot;distance&quot;].toString()),
+    profilePhotoUrl: json[&quot;profile_photo_url&quot;],
+    square100ProfilePhotoUrl: json[&quot;square100_profile_photo_url&quot;],
+    square300ProfilePhotoUrl: json[&quot;square300_profile_photo_url&quot;],
+    square500ProfilePhotoUrl: json[&quot;square500_profile_photo_url&quot;],
+    age: json[&quot;age&quot;],
+    partnerExpectations: json[&quot;partnerExpectations&quot;] == null
+        ? []
+        : List&lt;LifeStyleActivity&gt;.from(json[&quot;partnerExpectations&quot;]!
+            .map((x) =&gt; LifeStyleActivity.fromJson(x))),
+    lifeStyleActivities: json[&quot;lifeStyleActivities&quot;] == null
+        ? []
+        : List&lt;LifeStyleActivity&gt;.from(json[&quot;lifeStyleActivities&quot;]!
+            .map((x) =&gt; LifeStyleActivity.fromJson(x))),
+    personalityTraits: json[&quot;personalityTraits&quot;] == null
+        ? []
+        : List&lt;LifeStyleActivity&gt;.from(json[&quot;personalityTraits&quot;]!
+            .map((x) =&gt; LifeStyleActivity.fromJson(x))),
+    allAvatars: json[&quot;allAvatars&quot;] == null
+        ? []
+        : List&lt;AllAvatar&gt;.from(
+            json[&quot;allAvatars&quot;]!.map((x) =&gt; AllAvatar.fromJson(x))),
+  );
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../../index.html">fliq</a></li>
+    <li><a href="../../domain_home_models_view_suggested_profile_model/domain_home_models_view_suggested_profile_model-library.html">view_suggested_profile_model</a></li>
+    <li><a href="../../domain_home_models_view_suggested_profile_model/ViewSuggestedProfileModel-class.html">ViewSuggestedProfileModel</a></li>
+    <li class="self-crumb">ViewSuggestedProfileModel.fromJson factory constructor</li>
+</ol>
+
+    <h5>ViewSuggestedProfileModel class</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+

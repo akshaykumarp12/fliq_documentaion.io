@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the handleNotificationNavigation function from the firebase_messaging_serveice library, for the Dart programming language.">
+  <title>handleNotificationNavigation function - firebase_messaging_serveice library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+  
+</head>
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+<div id="overlay-under-drawer"></div>
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_core_serveice_notification_firebase_messaging_serveice/application_core_serveice_notification_firebase_messaging_serveice-library.html">application&#47;core&#47;serveice&#47;notification&#47;firebase_messaging_serveice.dart</a></li>
+    <li class="self-crumb">handleNotificationNavigation function</li>
+  </ol>
+  <div class="self-name">handleNotificationNavigation</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="application_core_serveice_notification_firebase_messaging_serveice&#47;application_core_serveice_notification_firebase_messaging_serveice-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">handleNotificationNavigation</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+<span class="returntype">void</span>
+<span class="name ">handleNotificationNavigation</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="handleNotificationNavigation-param-context"><span>required</span> <span class="type-annotation"><a href="https://api.flutter.dev/flutter/widgets/BuildContext-class.html">BuildContext</a></span> <span class="parameter-name">context</span>, </span></li>
+<li><span class="parameter" id="handleNotificationNavigation-param-notification"><span>required</span> <span class="type-annotation"><a href="../domain_notification_models_user_notification/UserNotification-class.html">UserNotification</a></span> <span class="parameter-name">notification</span>, </span></li>
+</ol>})
+
+        
+
+    </section>
+    
+<section class="desc markdown">
+  <p>Handles user navigation triggered by notification interactions.</p>
+<p>Routes users to corresponding app screens depending on <code>notificationActionType</code>.
+Enforces premium access for certain features.
+Falls back or denies navigation based on user status.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void handleNotificationNavigation({
+  required BuildContext context,
+  required UserNotification notification,
+}) {
+  final String? type = notification.adminNotification?.notificationActionType;
+  Logger.logInfo(
+      &quot;notificationActionType ${notification.adminNotification?.notificationActionType}&quot;);
+
+  switch (type) {
+    case &quot;edit-profile-screen&quot;:
+      AppRoute.pushNamed(routeName: type!);
+      break;
+    case &quot;daily_login_reward&quot;:
+      break;
+
+    case &quot;coupon&quot;:
+    case &quot;coupon_notification&quot;:
+      &#47;&#47; Navigator.pushNamed(context, CouponScreen.routeName);
+      break;
+
+    case &quot;new_users_nearby_alert&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(0);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+
+    case &quot;inventory_update&quot;:
+      &#47;&#47; Navigator.pushNamed(context, InventoryScreen.routeName);
+      break;
+
+    case &quot;security_alert_login&quot;:
+      &#47;&#47; Navigator.pushNamed(context, LoginAlertScreen.routeName);
+      break;
+
+    case &quot;security_alert&quot;:
+      &#47;&#47; Navigator.pushNamed(context, LoginAlertScreen.routeName);
+      break;
+
+    case &quot;stalking_alert&quot;:
+      handleFeature(
+        context: context,
+        onAllowed: () {
+          Navigator.pushNamed(
+            context,
+            SuggestedProfileDetailsScreen.routeName,
+            arguments: {
+              &#39;id&#39;: int.parse(
+                notification.customers?.id ?? &quot;&quot;,
+              ),
+              &quot;is_premium&quot;: notification.customers?.isPremiumCustomer ?? false
+            },
+          );
+        },
+      );
+      break;
+
+    case &quot;security_alert_change_password&quot;:
+      &#47;&#47; Navigator.pushNamed(context, PasswordChangeAlertScreen.routeName);
+      break;
+
+    case &quot;boost_reminder&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(2);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+
+    case &quot;low_coin_alert&quot;:
+      AppRoute.pushNamed(routeName: FliqCoinScreen.routeName);
+      break;
+
+    case &quot;inactivity_reminder&quot;:
+      break;
+
+    case &quot;profile_completion_reminder&quot;:
+      AppRoute.pushNamed(routeName: EditProfile.routeName);
+      break;
+
+    case &quot;subscription_plan_reminder&quot;:
+      AppRoute.pushNamed(routeName: FliqPremiumScreen.routeName);
+      break;
+
+    case &quot;chat_message_received&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(3);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+    case &quot;chat_message&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(3);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+    case &quot;chat-screen&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(3);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+    case &quot;profile_verification_success&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(4);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+
+    case &quot;disable_vanish_mode&quot;:
+      AppRoute.pushNamed(routeName: SettingsScreen.routeName);
+      break;
+
+    case &quot;enable_vanish_mode&quot;:
+      AppRoute.pushNamed(routeName: SettingsScreen.routeName);
+      break;
+
+    case &quot;like_profile&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(1);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+    case &quot;user-profile-details&quot;:
+      handleFeature(
+        context: context,
+        onAllowed: () {
+          Navigator.pushNamed(
+            context,
+            SuggestedProfileDetailsScreen.routeName,
+            arguments: {
+              &quot;id&quot;: int.parse(notification.customers?.id ?? &quot;&quot;),
+              &quot;isPremium&quot;: notification.customers?.isPremiumCustomer ?? false
+            },
+          );
+        },
+      );
+    case &quot;like_profile_hidden&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(1);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+    case &quot;New Like Profile Hidden&quot;:
+      &#47;&#47; Navigator.pushNamed(context, LikesScreen.routeName);
+      break;
+
+    case &quot;view_suggested_profile&quot;:
+      handleFeature(
+        context: context,
+        onAllowed: () {
+          Navigator.pushNamed(
+            context,
+            SuggestedProfileDetailsScreen.routeName,
+            arguments: {
+              &quot;id&quot;: int.parse(notification.customers?.id ?? &quot;&quot;),
+              &quot;isPremium&quot;: notification.customers?.isPremiumCustomer ?? false
+            },
+          );
+        },
+      );
+      break;
+
+    case &quot;one_time_view_message&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(3);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+
+    case &quot;like_back_profile&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(3);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+
+    case &quot;super_like_profile&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(1);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+
+    case &quot;gift_update&quot;:
+      &#47;&#47; AppRoute.pushNamed(routeName: GiftScreen.routeName);
+      break;
+
+    case &quot;gift_order_status_updation&quot;:
+      AppRoute.pushNamed(routeName: SendGiftScreen.routeName);
+      break;
+
+    case &quot;coin_pack_purchase&quot;:
+      AppRoute.pushNamed(routeName: FliqCoinScreen.routeName);
+      break;
+
+    case &quot;blacklist_notification&quot;:
+      handleFeature(
+        context: context,
+        onAllowed: () {
+          AppRoute.pushNamed(routeName: BlockContact.routeName);
+        },
+      );
+      break;
+
+    case &quot;account_suspension&quot;:
+      &#47;&#47; Navigator.pushNamed(context, AccountSuspensionScreen.routeName);
+      break;
+
+    case &quot;appeal_for_blacklist_status_update&quot;:
+      &#47;&#47; Navigator.pushNamed(context, AppealBlacklistScreen.routeName);
+      break;
+
+    case &quot;ticket_resolution&quot;:
+      AppRoute.pushNamed(routeName: TicketListScreen.routeName);
+      break;
+
+    case &quot;gift_order_tracking_code_updation&quot;:
+      AppRoute.pushNamed(routeName: SendGiftScreen.routeName);
+      break;
+    case &quot;missed_chat_reminder&quot;:
+      context.read&lt;ThemeCubit&gt;().setIndex(3);
+      AppRoute.pushNamed(routeName: AppRoot.routeName);
+      break;
+    default:
+      break;
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">fliq</a></li>
+    <li><a href="../application_core_serveice_notification_firebase_messaging_serveice/application_core_serveice_notification_firebase_messaging_serveice-library.html">firebase_messaging_serveice</a></li>
+    <li class="self-crumb">handleNotificationNavigation function</li>
+</ol>
+
+    <h5>firebase_messaging_serveice library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+</main>
+<footer>
+  <span class="no-break">
+    fliq
+      1.3.1+32
+  </span>
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+</body>
+</html>
+
